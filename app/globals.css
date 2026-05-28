@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font fallbacks for Google Fonts timeout issues */
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-questrial: 'Questrial', sans-serif;
+  --font-pattaya: 'Pattaya', cursive;
+  --font-poppins: 'Poppins', sans-serif;
+  
+  /* Oasis exact color variables from design */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  
+  /* Exact colors from the design palette */
+  --oasis-bg-light: #FBF4F8;      /* Light pink background */
+  --oasis-bg-cream: #FDE9F1;       /* Cream background */
+  --oasis-orange: #F48020;         /* Primary orange */
+  --oasis-purple: #864486;         /* Primary purple */
+  --oasis-violet: #9678B6;         /* Light violet/purple */
+  --oasis-pink: #F6ADCD;           /* Pink accent */
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.font-questrial {
+  font-family: var(--font-questrial);
+}
+
+.font-pattaya {
+  font-family: var(--font-pattaya);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+@layer utilities {
+  .gradient-orange {
+    background: linear-gradient(135deg, #F48020 0%, #ff6b35 100%);
+  }
+
+  .bg-oasis-purple\/90 {
+    background-color: rgba(134, 68, 134, 0.9);
+  }
+
+  .bg-oasis-purple\/40 {
+    background-color: rgba(134, 68, 134, 0.4);
+  }
+  
+  .bg-oasis-purple\/30 {
+    background-color: rgba(134, 68, 134, 0.3);
+  }
+  
+  .bg-oasis-purple\/95 {
+    background-color: rgba(134, 68, 134, 0.95);
+  }
+}
+
+body {
+  font-family: var(--font-poppins);
+}
+
+@media (max-width: 639px) {
+  #headerlp3 {
+    height: 72px;
+  }
+}
+
+.logow {
+  width: 120px;
+}
+
+.line-min-size {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+.position-unset {
+  position: unset !important;
+}
+
+.book-a-consultation {
+  padding: .5rem 1rem;
+}
+
+.custom-youtube-player {
+  position: fixed;
+  width: 450px;
+  height: 300px;
+  bottom: 40px;
+  right: 40px;
+  background: #000;
+}
+
+.custom-youtube-player .close,
+.custom-youtube-player .handle {
+  position: absolute;
+  right: 0px;
+  top: -30px;
+  width: 32px;
+  height: 32px;
+  background: #000;
+  color: #fff;
+  opacity: 1;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.custom-youtube-player .handle {
+  right: 32px;
+  padding-top: 8px;
+  cursor: move;
+}
+
+@media screen and (min-width: 768px) {
+  .before-dot::before {
+    content: "•";
+    color: currentColor;
+    margin-right: 0.75rem;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+  }
+
+  .custom-youtube-player {
+    right: 55px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .custom-youtube-player {
+    right: 0;
+  }
+}
+
+.media_list .react-multi-carousel-dot-list {
+  bottom: 10px;
+}
+
+.media_list .react-multi-carousel-dot--active button {
+  background: #874487 !important;
+  border-color: #874487;
+}
+
+.media_list .react-multi-carousel-dot button {
+  background: #F8ADCE;
+  border-color: #874487;
+}
+
+.process_last_list:last-child .process_line {
+  display: none;
+}
+
+.home_banner .react-multi-carousel-track {
+  height: 100%;
+}
+
+/* Hide scrollbar for Webkit browsers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes slideInItem {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-item {
+  animation: slideInItem 0.5s ease-out forwards;
+}
+
+@keyframes letterZoom {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.animate-letter-zoom {
+  display: inline-block;
+  animation: letterZoom 1.5s ease-out;
+}
