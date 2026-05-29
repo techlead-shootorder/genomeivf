@@ -19,16 +19,16 @@ const MaxTabs = () => {
   return (
     <>
       {/* Tab Navigation for mobile */}
-      <div className='md:hidden bg-[#471847] py-10'>
-        <div className="max-w-7xl mx-auto flex flex-wrap gap-[12px] md:gap-8 justify-center bg-[#471847]">
+      <div className='md:hidden bg-blue-100 py-10'>
+        <div className="max-w-7xl mx-auto flex flex-wrap gap-[12px] md:gap-8 justify-center bg-blue-100">
           {tabList.map((tab) => (
             <button
               key={tab}
               onClick={() => handleTabClick(tab)}
               className={`px-3 py-2 rounded-full font-medium text-[15px] transition-all ${
                 activeTab === tab
-                  ? 'bg-white text-[#471847] border border-white'
-                  : 'text-white border border-white'
+                  ? 'bg-[#1E4A6E] text-white border border-[#1E4A6E]'
+                  : 'text-[#1E4A6E] border border-[#1E4A6E]'
               }`}
             >
               {tab}
@@ -46,8 +46,8 @@ const MaxTabs = () => {
               onClick={() => handleTabClick(tab)}
               className={`px-3 py-2 rounded-full font-medium text-[15px] transition-all ${
                 activeTab === tab
-                  ? 'bg-[#471847] text-white border border-[#471847]'
-                  : 'text-[#471847] border border-[#471847]'
+                  ? 'bg-[#1E4A6E] text-white border border-[#1E4A6E]'
+                  : 'text-[#1E4A6E] border border-[#1E4A6E]'
               }`}
             >
               {tab}

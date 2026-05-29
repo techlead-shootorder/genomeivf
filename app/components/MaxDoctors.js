@@ -31,7 +31,7 @@ const DesktopDoctorCard = memo(({ doctor, service }) => {
 
     return (
         <div className="flex-shrink-0 md:w-1/3 lg:w-1/4 px-2">
-            <div className="bg-pink-100 rounded-2xl shadow-lg overflow-hidden border border-primary mx-2 h-[400px] flex flex-col">
+            <div className="bg-blue-100 rounded-2xl shadow-lg overflow-hidden border border-primary mx-2 h-[400px] flex flex-col">
                 <div className="relative p-6 pt-8 flex-1 flex flex-col">
                     <div className="flex justify-center mb-0">
                         <div className="relative">
@@ -92,7 +92,7 @@ const MobileDoctorCard = memo(({ doctor, service }) => {
 
     return (
         <div className="flex-shrink-0 w-[361px] h-[435px] md:w-80">
-            <div className="bg-[#ffe6f1] rounded-2xl shadow-lg overflow-hidden border border-[#642564] h-full flex flex-col">
+            <div className="bg-blue-100 rounded-2xl shadow-lg overflow-hidden border border-[#1E4A6E] h-full flex flex-col">
                 <div className="relative p-6 flex-1 flex flex-col">
                     <div className="flex justify-center mb-4">
                         <div className="relative">
@@ -117,7 +117,7 @@ const MobileDoctorCard = memo(({ doctor, service }) => {
                     </div>
 
                     <div className="text-center flex-1 flex flex-col justify-center">
-                        <h3 className="text-[22px] font-bold text-[#692F69] min-h-[2.5rem] flex items-center justify-center">
+                        <h3 className="text-[22px] font-bold text-[#2B5F8A] min-h-[2.5rem] flex items-center justify-center">
                             {doctor?.fullname}
                         </h3>
                         <p className="text-sm text-[#333333] mb-1 min-h-[1.25rem] font-bold">{doctor?.qualification}</p>
@@ -176,11 +176,11 @@ const MaxDoctors = ({center, filteredDoctors, service, isMeta }) => {
 
     return (
         <>
-            <section id='Doctors' className="bg-[#fff1f7] py-8 md:py-16">
+            <section id='Doctors' className="bg-gray-50 py-8 md:py-16">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="text-left mb-8 sm:flex sm:items-center sm:gap-8">
                         <div className="text-[55px] font-bold text-primary text-opacity-50">50+</div>
-                        <h1 className="text-[29px] font-bold text-[#4E204E]">
+                        <h1 className="text-[29px] font-bold text-[#1E4A6E]">
                             Expert IVF Doctors & Fertility Specialists in {displayCity}
                         </h1>
                     </div>
@@ -221,28 +221,28 @@ const MaxDoctors = ({center, filteredDoctors, service, isMeta }) => {
                         <div className='absolute -top-20 right-6 flex gap-4'>
                             <button
                                 onClick={prevSlide}
-                                className="flex items-center justify-center border border-[#471847] rounded-full w-[30px] h-[30px] transition-colors z-10"
+                                className="flex items-center justify-center border border-[#1E4A6E] rounded-full w-[30px] h-[30px] transition-colors z-10"
                             >
-                                <ChevronLeft className="w-[20px] h-[26px] text-[#471847]" />
+                                <ChevronLeft className="w-[20px] h-[26px] text-[#1E4A6E]" />
                             </button>
                             <button
                                 onClick={nextSlide}
-                                className="flex items-center justify-center border border-[#471847] rounded-full w-[30px] h-[30px] transition-colors z-10"
+                                className="flex items-center justify-center border border-[#1E4A6E] rounded-full w-[30px] h-[30px] transition-colors z-10"
                             >
-                                <ChevronRight className="w-[20px] h-[26px] text-[#471847]" />
+                                <ChevronRight className="w-[20px] h-[26px] text-[#1E4A6E]" />
                             </button>
                         </div>
                     </div>
 
                     {/* Bottom Section */}
                     <div className="text-center mt-4 md:mt-12">
-                        <div className="text-[20px] font-semibold text-[#4E204E] mb-4">Time Matters in {formatService}. <br className='visible md:hidden' /> Get the Right Advice</div>
+                        <div className="text-[20px] font-semibold text-[#1E4A6E] mb-4">Time Matters in {formatService}. <br className='visible md:hidden' /> Get the Right Advice</div>
                         
                                                 <>
                             {/* Desktop: Show popup button */}
                             <button
                                 onClick={() => setShowPopup(true)}
-                                className="hidden md:flex bg-[#F77B2F] text-white px-8 py-3 rounded-full font-semibold text-[18px] shadow-lg hover:shadow-xl transition-shadow items-center space-x-2 mx-auto"
+                                className="hidden md:flex bg-[#E8772E] text-white px-8 py-3 rounded-full font-semibold text-[18px] shadow-lg hover:shadow-xl transition-shadow items-center space-x-2 mx-auto"
                             >
                                 <img src="/images/lp/maxlp/white-call-icon.png" className='w-[21px] h-[21px]' />
                                 <span>Get a Free Consultation</span>
@@ -256,7 +256,7 @@ const MaxDoctors = ({center, filteredDoctors, service, isMeta }) => {
                                     e.preventDefault();
                                     scrollToLeadForm();
                                 }}
-                                className="md:hidden flex bg-[#F77B2F] text-white px-8 py-3 rounded-full font-semibold text-[18px] shadow-lg hover:shadow-xl transition-shadow items-center justify-center space-x-2 mx-auto w-fit"
+                                className="md:hidden flex bg-[#E8772E] text-white px-8 py-3 rounded-full font-semibold text-[18px] shadow-lg hover:shadow-xl transition-shadow items-center justify-center space-x-2 mx-auto w-fit"
                             >
                                 <img
                                     src="/images/lp/maxlp/white-call-icon.png"

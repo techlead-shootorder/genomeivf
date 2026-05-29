@@ -188,11 +188,11 @@ const MaxCenters = ({center}) => {
     }
 
     return (
-        <section id='Locations' className="bg-pink-50 py-8 md:py-16 relative">
+        <section id='Locations' className="bg-gray-50 py-8 md:py-16 relative">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="text-left mb-8 md:flex md:items-center md:gap-8">
                     <div className="text-[55px] md:text-5xl font-bold text-primary text-opacity-50">30+ Centers</div>
-                    <h2 className="text-[29px] font-bold text-[#692F69] md:mt-2">
+                    <h2 className="text-[29px] font-bold text-[#2B5F8A] md:mt-2">
                         10 States, 22 cities
                     </h2>
                 </div>
@@ -206,7 +206,7 @@ const MaxCenters = ({center}) => {
                             <div className={`p-4 ${openState === 'Telangana' && 'bg-white rounded-xl'}`}>
                                 <button
                                     onClick={() => toggleState('Telangana')}
-                                    className="flex items-center justify-between w-full text-left text-[18px] font-semibold text-[#471847]"
+                                    className="flex items-center justify-between w-full text-left text-[18px] font-semibold text-[#1E4A6E]"
                                 >
                                     Telangana
                                     {openState === 'Telangana' ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
@@ -279,7 +279,7 @@ const MaxCenters = ({center}) => {
                             <div key={state} className={`p-2 ${openState === state && 'bg-white rounded-xl'}`}>
                                 <button
                                     onClick={() => toggleState(state)}
-                                    className="flex items-center justify-between w-full text-left text-lg font-semibold text-[#471847] py-2"
+                                    className="flex items-center justify-between w-full text-left text-lg font-semibold text-[#1E4A6E] py-2"
                                 >
                                     {state}
                                     {openState === state ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}

@@ -5,16 +5,16 @@ const MaxFertilityMessage = () => {
   const [playVideo, setPlayVideo] = useState(false);
 
   return (
-    <section className="py-8 md:py-16 bg-gradient-to-b from-pink-50 to-pink-50 mb-3">
+    <section className="py-8 md:py-16 bg-gradient-to-b from-gray-50 to-gray-50 mb-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           
           {/* ================= MOBILE HEADING (ONLY MOBILE) ================= */}
           <div className="block md:hidden">
             <div className="relative pl-5 mb-4">
-              <span className="absolute left-0 h-[52px] w-1 rounded-full bg-[#F77B2F]" />
+              <span className="absolute left-0 h-[52px] w-1 rounded-full bg-[#E8772E]" />
               <h2
-                className="max-w-xl text-xl font-bold text-[#4E204E] leading-[1.15]"
+                className="max-w-xl text-xl font-bold text-[#1E4A6E] leading-[1.15]"
               >
                 A Message from Our Senior
                 <span className="block mt-1 leading-[1.3]">
@@ -78,10 +78,10 @@ const MaxFertilityMessage = () => {
 
               {/* DESKTOP HEADING (UNCHANGED) */}
               <div className="relative pl-5 hidden md:block">
-                <span className="absolute left-0 h-[52px] md:h-[88px] w-1 rounded-full bg-[#F77B2F]" />
+                <span className="absolute left-0 h-[52px] md:h-[88px] w-1 rounded-full bg-[#E8772E]" />
                 <h2
                   className="max-w-xl text-xl sm:text-2xl md:text-3xl lg:text-[38px] 
-                  font-bold text-[#4E204E] leading-[1.15]"
+                  font-bold text-[#1E4A6E] leading-[1.15]"
                 >
                   A Message from Our Senior
                   <span className="block mt-1 leading-[1.3]">
@@ -93,7 +93,7 @@ const MaxFertilityMessage = () => {
               {/* BULLET POINTS (HIDDEN ON MOBILE) */}
               <div className="space-y-3 pt-1 hidden md:block">
                 <div className="flex items-start gap-3">
-                  <span className="mt-2 w-2 h-2 bg-[#F77B2F] rounded-full flex-shrink-0" />
+                  <span className="mt-2 w-2 h-2 bg-[#E8772E] rounded-full flex-shrink-0" />
                   <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-normal">
                     Our fertility experts follow globally accepted IVF protocols
                     to deliver personalised and ethical fertility care.
@@ -101,7 +101,7 @@ const MaxFertilityMessage = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="mt-2 w-2 h-2 bg-[#F77B2F] rounded-full flex-shrink-0" />
+                  <span className="mt-2 w-2 h-2 bg-[#E8772E] rounded-full flex-shrink-0" />
                   <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-normal">
                     At Oasis Fertility, every patient is treated through a
                     structured, science-driven IVF process led by experienced
@@ -110,7 +110,7 @@ const MaxFertilityMessage = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="mt-2 w-2 h-2 bg-[#F77B2F] rounded-full flex-shrink-0" />
+                  <span className="mt-2 w-2 h-2 bg-[#E8772E] rounded-full flex-shrink-0" />
                   <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-normal">
                     This message represents the medical standards and care
                     philosophy followed by Oasis Fertility doctors across

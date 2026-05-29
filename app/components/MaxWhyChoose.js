@@ -110,7 +110,7 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="block md:hidden text-left mb-8 ml-4">
                         <h1 className='text-[50px] md:text-[55px] font-bold text-primary text-opacity-50'>Why Choose</h1>
-                        <h2 className='text-[26px] md:text-3xl font-bold text-[#692F69]'>Oasis Fertility {displayCity}</h2>
+                        <h2 className='text-[26px] md:text-3xl font-bold text-[#2B5F8A]'>Oasis Fertility {displayCity}</h2>
 
                         <div className='mt-4'>
                             <p>Choose Oasis Fertility for advanced tech, expert care, and personalized fertility solutions, ensuring your best chance at parenthood.</p>
@@ -136,7 +136,7 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
                                             <>
                                                 {/* Desktop: Show popup button */}
                                                 <button
-                                                    className="hidden md:flex bg-[#F77B2F] text-white px-6 py-[10px] rounded-lg font-semibold text-sm flex items-center space-x-2 transition-colors"
+                                                    className="hidden md:flex bg-[#E8772E] text-white px-6 py-[10px] rounded-lg font-semibold text-sm flex items-center space-x-2 transition-colors"
                                                     onClick={() => setShowPopup(true)}
                                                 >
                                                     <img src='/images/lp/maxlp/white-call-icon.png' width={17} height={21} />
@@ -151,7 +151,7 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
                                                         e.preventDefault();
                                                         scrollToLeadForm();
                                                     }}
-                                                    className="md:hidden bg-[#F77B2F] text-white px-6 py-[10px] rounded-lg font-semibold text-sm flex items-center space-x-2 transition-colors"
+                                                    className="md:hidden bg-[#E8772E] text-white px-6 py-[10px] rounded-lg font-semibold text-sm flex items-center space-x-2 transition-colors"
                                                 >
                                                     <img src='/images/lp/maxlp/white-call-icon.png' width={17} height={21} />
                                                     <span>Book Now</span>
@@ -163,24 +163,24 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
 
                                 {/* Oasis Comparision Card */}
                                 <div className='flex'>
-                                    <div className='rounded-lg overflow-hidden bg-[#4E204E] '>
+                                    <div className='rounded-lg overflow-hidden bg-[#1E4A6E] '>
                                         <div className='flex'>
-                                            <div className='h-[100px] w-[55px] text-white bg-[#471747] flex justify-center items-center p-4'></div>
-                                            <div className='h-[100px] text-white bg-[#4E204E] w-full flex items-center px-2'>
-                                                <Image src="/images/lp/maxlp/oasis-white.png" alt='oasis-logo' height={54} width={125} />
+                                            <div className='h-[100px] w-[55px] text-white bg-[#163D5C] flex justify-center items-center p-4'></div>
+                                            <div className='h-[100px] text-white bg-[#1E4A6E] w-full flex items-center px-2'>
+                                                <img src="https://genomeivf.com/images/logo.png" alt='Genome IVF logo' height={54} width={125} className='object-contain' />
                                             </div>
                                         </div>
                                         {oasisData.map((item, index) => (
                                             <div key={index} className='flex border-b border-gray-500 border-dotted'>
-                                                <div className={`text-white bg-[#471747] flex justify-center items-center p-4 ${index == oasisData.length - 1 ? 'h-[80px]' : 'h-[60px]'}`}> <img src={item.icon} width={24} height={33} /> </div>
-                                                <div className={`text-white text-xs sm:text-sm bg-[#4E204E] w-full flex items-center px-2 ${index == oasisData.length - 1 ? 'h-[80px]' : 'h-[60px]'}`}> {item.oasisText}</div>
+                                                <div className={`text-white bg-[#163D5C] flex justify-center items-center p-4 ${index == oasisData.length - 1 ? 'h-[80px]' : 'h-[60px]'}`}> <img src={item.icon} width={24} height={33} /> </div>
+                                                <div className={`text-white text-xs sm:text-sm bg-[#1E4A6E] w-full flex items-center px-2 ${index == oasisData.length - 1 ? 'h-[80px]' : 'h-[60px]'}`}> {item.oasisText}</div>
                                             </div>
                                         ))}
                                         <div className='px-2 py-2'>
                                             <>
                                                 {/* Desktop: Show popup button */}
                                                 <button
-                                                    className='hidden md:flex w-full bg-[#F77B2F] px-2 py-3 justify-center items-center text-[18px] text-white font-bold gap-4 rounded-lg'
+                                                    className='hidden md:flex w-full bg-[#E8772E] px-2 py-3 justify-center items-center text-[18px] text-white font-bold gap-4 rounded-lg'
                                                     onClick={() => setShowPopup(true)}
                                                 >
                                                     <img src='/images/lp/maxlp/white-call-icon.png' width={22} height={22} />
@@ -195,7 +195,7 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
                                                         e.preventDefault();
                                                         scrollToLeadForm();
                                                     }}
-                                                    className='md:hidden w-full bg-[#F77B2F] px-2 py-3 flex justify-center items-center text-[18px] text-white font-bold gap-4 rounded-lg'
+                                                    className='md:hidden w-full bg-[#E8772E] px-2 py-3 flex justify-center items-center text-[18px] text-white font-bold gap-4 rounded-lg'
                                                 >
                                                     <img src='/images/lp/maxlp/white-call-icon.png' width={22} height={22} />
                                                     Book Now
@@ -205,13 +205,13 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
                                     </div>
 
                                     <div className='rounded-tr-lg rounded-br-lg h-fit overflow-hidden mt-[10px]'>
-                                        <div className='bg-[#874487] pt-6 pb-[38px]'>
+                                        <div className='bg-[#2B5F8A] pt-6 pb-[38px]'>
                                             <p className='text-white ml-4 sm:ml-8 text-lg'>Other Clinics</p>
                                         </div>
                                         {otherClinicsData.map((item, index) => (
                                             <div key={index} className={`flex  ${index != otherClinicsData.length - 1 ? 'border-b border-gray-900 border-dotted' : ''}`}>
                                                 <div
-                                                    className={` text-xs sm:text-sm text-white bg-[#874487] w-full flex pt-4 pl-4 sm:pl-8 pr-2 ${index == otherClinicsData.length - 1 ? 'h-[100px] md:h-[70px]' : 'h-[60px]'}`}
+                                                    className={` text-xs sm:text-sm text-white bg-[#2B5F8A] w-full flex pt-4 pl-4 sm:pl-8 pr-2 ${index == otherClinicsData.length - 1 ? 'h-[100px] md:h-[70px]' : 'h-[60px]'}`}
                                                 > {item.otherText}
                                                 </div>
                                             </div>
@@ -222,12 +222,12 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
 
                             {!hideEbook && (
                                 <div className="text-center mt-4 md:mt-16">
-                                    <div className="text-[18px] sm:text-lg font-semibold text-[#4E204E] mb-4 px-4">
+                                    <div className="text-[18px] sm:text-lg font-semibold text-[#1E4A6E] mb-4 px-4">
                                         Preparing for IVF? <br className='visible md:hidden' />Follow This Simple Step-by-Step Guide
                                     </div>
                                     <button
                                         className="flex text-white px-10 sm:px-8 py-3 rounded-full font-medium text-base sm:text-lg transition-shadow items-center space-x-2 mx-auto"
-                                        style={{ backgroundColor: '#F77B2F' }}
+                                        style={{ backgroundColor: '#E8772E' }}
                                         onClick={() => setShowBookInstantPopup(true)}
                                     >
                                         <span className='text-[18px]'>Download E-book</span>
@@ -238,14 +238,12 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
                     </div>
                 </div>
             </section>
-            
+
             {/* Consultation Popup */}
-            
-                <MaxGooglePeekBoo
-                    isOpen={showPopup}
-                    onClose={() => setShowPopup(false)}
-                />
-            ) : (
+            <MaxGooglePeekBoo
+                isOpen={showPopup}
+                onClose={() => setShowPopup(false)}
+            />
 
             {/* Book Download Popup */}
             <MaxBookPopupInstant

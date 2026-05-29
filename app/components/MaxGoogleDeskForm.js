@@ -244,7 +244,7 @@ const MaxGoogleDeskForm = ({ formatService, isInhouse }) => {
   };
 
   return (
-    <div className={`hidden md:block relative max-w-sm mx-auto rounded-[20px] bg-[#FFE6F1] z-10 ${isInhouse ? 'mt-[60px]' : 'mt-10'}`}>
+    <div className={`hidden md:block relative max-w-sm mx-auto rounded-[20px] bg-blue-100 z-10 ${isInhouse ? 'mt-[60px]' : 'mt-10'}`}>
       {/* Header */}
       <div className="flex justify-center">
         <div className="bg-[url('/images/lp/maxlp/rectangle.png')] bg-cover bg-center h-[53px] w-[254px]">
@@ -346,7 +346,7 @@ const MaxGoogleDeskForm = ({ formatService, isInhouse }) => {
               disabled={isSubmitting || !isFormValid()}
               className={`${isSubmitting || !isFormValid()
                 ? 'bg-gray-400 cursor-not-allowed'
-                : 'bg-[#F77B2F] hover:bg-[#e66b1f]'
+                : 'bg-[#E8772E] hover:bg-[#d06a28]'
                 } text-white font-bold py-2 px-[10px] w-[308px] rounded-full flex items-center justify-between transition-colors duration-200`}
             >
               {isSubmitting ? (
@@ -368,7 +368,7 @@ const MaxGoogleDeskForm = ({ formatService, isInhouse }) => {
         {/* Footer Note */}
         <div className="py-4 text-gray-600 flex items-start gap-2 text-sm">
           <img src="/images/lp/maxlp/shield.png" className="ml-[20px]" width={26} height={28} />
-          <span className="text-[12px] text-[#692F69]">
+          <span className="text-[12px] text-[#2B5F8A]">
             We keep your data <strong>100% safe</strong>. By submitting, you accept our{" "}
             <span className="cursor-pointer font-semibold">Terms and Conditions</span>
           </span>

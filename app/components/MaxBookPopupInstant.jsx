@@ -211,10 +211,10 @@ const MaxBookPopupInstant = ({ isOpen, onClose }) => {
 
     return (
         <div
-            className="fixed inset-0 bg-[#471847] sm:bg-opacity-100 flex items-center justify-center z-[9999999]"
+            className="fixed inset-0 bg-[#163D5C] sm:bg-opacity-100 flex items-center justify-center z-[9999999]"
             onClick={handleOverlayClick}
         >
-            <div className="relative w-full h-screen bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 rounded-2xl overflow-hidden">
+            <div className="relative w-full h-screen bg-gradient-to-br from-orange-400 via-blue-500 to-blue-700 rounded-2xl overflow-hidden">
                 {/* Close Button */}
                 <button
                     onClick={handleClose}
@@ -245,7 +245,7 @@ const MaxBookPopupInstant = ({ isOpen, onClose }) => {
                     </div>
 
                     {/* Right Side - Form */}
-                    <div className=' sm:w-1/2 sm:bg-[#4b1d4b]'>
+                    <div className=' sm:w-1/2 sm:bg-[#1a3d5c]'>
                         <div className="p-8 flex flex-col justify-center sm:ml-20 sm:mt-24 relative w-full sm:w-fit">
                             <div className="hidden sm:block text-center mb-8">
                                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2">

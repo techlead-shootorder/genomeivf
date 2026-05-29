@@ -257,10 +257,10 @@ const MaxGooglePeekBoo = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-[#471847] sm:bg-opacity-80 flex items-center justify-center z-[9999999]"
+      className="fixed inset-0 bg-[#163D5C] sm:bg-opacity-80 flex items-center justify-center z-[9999999]"
       onClick={handleOverlayClick}
     >
-      <div className="relative w-full h-screen bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 overflow-hidden">
+      <div className="relative w-full h-screen bg-gradient-to-br from-orange-400 via-blue-500 to-blue-700 overflow-hidden">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -291,7 +291,7 @@ const MaxGooglePeekBoo = ({ isOpen, onClose }) => {
           </div>
 
           {/* Right Side - Form */}
-          <div className='sm:w-1/2 sm:bg-[#4b1d4b] flex items-center'>
+          <div className='sm:w-1/2 sm:bg-[#1a3d5c] flex items-center'>
             <div className="p-4 sm:p-8 flex flex-col justify-center w-full sm:w-fit sm:ml-20 relative">
               <div className="hidden sm:block mb-8">
                 <h2 className={`${nanumPenScript.className} text-[44px] sm:text-4xl font-bold font-nanum-pen text-white mb-2`} style={{ fontSize: '66px' }}>

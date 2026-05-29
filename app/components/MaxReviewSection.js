@@ -252,7 +252,7 @@ const ReviewsSection = ({ hideEbook = false }) => {
                 <div className='flex flex-col sm:flex-row sm:justify-between'>
                     <div className="text-left mb-8">
                         <div className="text-[55px] md:text-5xl font-bold text-primary text-opacity-50 md:mb-2">60,000+</div>
-                        <h2 className="text-[29px] md:text-3xl font-bold text-[#471847]">
+                        <h2 className="text-[29px] md:text-3xl font-bold text-[#1E4A6E]">
                             Verified Reviews
                         </h2>
 
@@ -305,8 +305,8 @@ const ReviewsSection = ({ hideEbook = false }) => {
                             <button
                                 onClick={() => setActiveTab('IVF')}
                                 className={`px-6 py-1 rounded-full font-bold transition-colors ${activeTab === 'IVF'
-                                    ? 'bg-[#471847] text-white'
-                                    : 'border border-[#471847] text-[#471847]'
+                                    ? 'bg-[#1E4A6E] text-white'
+                                    : 'border border-[#1E4A6E] text-[#1E4A6E]'
                                     }`}
                             >
                                 IVF Treatment
@@ -314,8 +314,8 @@ const ReviewsSection = ({ hideEbook = false }) => {
                             <button
                                 onClick={() => setActiveTab('IVM')}
                                 className={`px-6 py-1 rounded-full font-bold transition-colors ${activeTab === 'IVM'
-                                    ? 'bg-[#471847] text-white'
-                                    : 'border border-[#471847] text-[#471847]'
+                                    ? 'bg-[#1E4A6E] text-white'
+                                    : 'border border-[#1E4A6E] text-[#1E4A6E]'
                                     }`}
                             >
                                 IVM Treatment
@@ -355,8 +355,8 @@ const ReviewsSection = ({ hideEbook = false }) => {
 
                                     {/* Author */}
                                     <div className="flex-shrink-0">
-                                        <div className="font-semibold text-[#4E204E]">{review.author}</div>
-                                        <div className="text-[#4E204E] text-sm ">Client ID: {review.clientId}</div>
+                                        <div className="font-semibold text-[#1E4A6E]">{review.author}</div>
+                                        <div className="text-[#1E4A6E] text-sm ">Client ID: {review.clientId}</div>
                                     </div>
                                 </div>
                             </div>
@@ -409,15 +409,15 @@ const ReviewsSection = ({ hideEbook = false }) => {
                     {/* Navigation Arrows */}
                     <button
                         onClick={prevSlide}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 flex items-center justify-center border border-[#471847] rounded-full w-[30px] h-[30px] transition-colors z-10"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 flex items-center justify-center border border-[#1E4A6E] rounded-full w-[30px] h-[30px] transition-colors z-10"
                     >
-                        <ChevronLeft className="w-[20px] h-[26px] text-[#471847]" />
+                        <ChevronLeft className="w-[20px] h-[26px] text-[#1E4A6E]" />
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 flex items-center justify-center border border-[#471847] rounded-full w-[30px] h-[30px] transition-colors z-10"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 flex items-center justify-center border border-[#1E4A6E] rounded-full w-[30px] h-[30px] transition-colors z-10"
                     >
-                        <ChevronRight className="w-[20px] h-[26px] text-[#471847]" />
+                        <ChevronRight className="w-[20px] h-[26px] text-[#1E4A6E]" />
                     </button>
 
                     {/* Dots Indicator */}
@@ -426,7 +426,7 @@ const ReviewsSection = ({ hideEbook = false }) => {
                             <button
                                 key={index}
                                 onClick={() => setCurrentIndex(index)}
-                                className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-purple-800' : 'bg-gray-300'
+                                className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-[#1E4A6E]' : 'bg-gray-300'
                                     }`}
                             />
                         ))}
@@ -435,12 +435,12 @@ const ReviewsSection = ({ hideEbook = false }) => {
 
                 {!hideEbook && (
                     <div className="text-center mt-4 md:mt-2">
-                        <div className="text-[18px] sm:text-lg font-semibold text-[#4E204E] mb-4 px-4">
+                        <div className="text-[18px] sm:text-lg font-semibold text-[#1E4A6E] mb-4 px-4">
                             Preparing for IVF? <br className='visible md:hidden' />Follow This Simple Step-by-Step Guide
                         </div>
                         <button
                             className="flex text-white px-10 sm:px-8 py-3 rounded-full font-medium text-base sm:text-lg transition-shadow items-center space-x-2 mx-auto"
-                            style={{ backgroundColor: '#F77B2F' }}
+                            style={{ backgroundColor: '#E8772E' }}
                             onClick={() => setShowBookInstantPopup(true)} // Add this onClick handler
                         >
                             <span className='text-[18px]'>Download E-book</span>

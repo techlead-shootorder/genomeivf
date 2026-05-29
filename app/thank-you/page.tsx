@@ -7,21 +7,21 @@ export default function ThankYou() {
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
         :root {
-          --blush-light: #FCF5F8;
-          --blush-mid:   #FDE9F1;
-          --orange:      #FF8100;
-          --orange-dark: #e06e00;
-          --pink:        #F6ADCD;
-          --lavender:    #9678B6;
-          --plum:        #7B3F8C;
+          --blush-light: #F4F7FA;
+          --blush-mid:   #E8F0F8;
+          --orange:      #E8772E;
+          --orange-dark: #d06a28;
+          --accent:      #E8772E;
+          --lavender:    #4A8BC2;
+          --plum:        #2B5F8A;
           --white:       #ffffff;
           --text-dark:   #1e1e1e;
           --text-mid:    #4a3a3a;
           --text-soft:   #9a7a80;
 
-          --grad-hero: linear-gradient(135deg, #FF8100 0%, #d4608a 55%, #7B3F8C 100%);
-          --grad-card: linear-gradient(135deg, #FDE9F1 0%, #FCF5F8 100%);
-          --grad-btn:  linear-gradient(135deg, #FF8100 0%, #e05090 100%);
+          --grad-hero: linear-gradient(135deg, #E8772E 0%, #2B5F8A 55%, #1E4A6E 100%);
+          --grad-card: linear-gradient(135deg, #E8F0F8 0%, #F4F7FA 100%);
+          --grad-btn:  linear-gradient(135deg, #E8772E 0%, #d06a28 100%);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -227,7 +227,7 @@ export default function ThankYou() {
         }
         .pill {
           background: linear-gradient(135deg, #FDE9F1, #FCF5F8);
-          border: 1px solid var(--pink);
+          border: 1px solid var(--accent);
           border-radius: 100px;
           padding: 5px 12px;
           font-size: 12px;
@@ -333,7 +333,7 @@ export default function ThankYou() {
           height: 3px;
         }
         .feature-card:nth-child(1)::before { background: var(--orange); }
-        .feature-card:nth-child(2)::before { background: var(--pink); }
+        .feature-card:nth-child(2)::before { background: var(--accent); }
         .feature-card:nth-child(3)::before { background: var(--lavender); }
         .feature-card:nth-child(4)::before { background: var(--plum); }
         .feature-card .icon { font-size: 26px; margin-bottom: 9px; display: block; }

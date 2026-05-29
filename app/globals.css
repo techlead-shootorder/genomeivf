@@ -19,13 +19,13 @@
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
   
-  /* Exact colors from the design palette */
-  --oasis-bg-light: #FBF4F8;      /* Light pink background */
-  --oasis-bg-cream: #FDE9F1;       /* Cream background */
-  --oasis-orange: #F48020;         /* Primary orange */
-  --oasis-purple: #864486;         /* Primary purple */
-  --oasis-violet: #9678B6;         /* Light violet/purple */
-  --oasis-pink: #F6ADCD;           /* Pink accent */
+  /* Genome IVF color palette */
+  --oasis-bg-light: #F4F7FA;      /* Light blue-gray background */
+  --oasis-bg-cream: #E8F0F8;       /* Light blue background */
+  --oasis-orange: #E8772E;         /* Genome orange */
+  --oasis-purple: #2B5F8A;         /* Genome blue (primary) */
+  --oasis-violet: #4A8BC2;         /* Light blue */
+  --oasis-accent: #E8772E;         /* Genome orange accent */
 }
 
 .font-inter {
@@ -46,23 +46,23 @@
 
 @layer utilities {
   .gradient-orange {
-    background: linear-gradient(135deg, #F48020 0%, #ff6b35 100%);
+    background: linear-gradient(135deg, #E8772E 0%, #ff6b35 100%);
   }
 
   .bg-oasis-purple\/90 {
-    background-color: rgba(134, 68, 134, 0.9);
+    background-color: rgba(43, 95, 138, 0.9);
   }
 
   .bg-oasis-purple\/40 {
-    background-color: rgba(134, 68, 134, 0.4);
+    background-color: rgba(43, 95, 138, 0.4);
   }
-  
+
   .bg-oasis-purple\/30 {
-    background-color: rgba(134, 68, 134, 0.3);
+    background-color: rgba(43, 95, 138, 0.3);
   }
-  
+
   .bg-oasis-purple\/95 {
-    background-color: rgba(134, 68, 134, 0.95);
+    background-color: rgba(43, 95, 138, 0.95);
   }
 }
 
@@ -149,13 +149,13 @@ body {
 }
 
 .media_list .react-multi-carousel-dot--active button {
-  background: #874487 !important;
-  border-color: #874487;
+  background: #2B5F8A !important;
+  border-color: #2B5F8A;
 }
 
 .media_list .react-multi-carousel-dot button {
-  background: #F8ADCE;
-  border-color: #874487;
+  background: #E8F0F8;
+  border-color: #2B5F8A;
 }
 
 .process_last_list:last-child .process_line {

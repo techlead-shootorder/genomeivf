@@ -15,7 +15,7 @@ const MaxFooter = () => {
 
   const termsContent = (
     <div className="space-y-4">
-      <h2 className="text-2xl font-bold text-[#4E204E] mb-4">Terms & Conditions</h2>
+      <h2 className="text-2xl font-bold text-[#1E4A6E] mb-4">Terms & Conditions</h2>
       <div className="space-y-3 text-gray-700">
         <p>Welcome to OASIS FERTILITY. These terms and conditions outline the rules and regulations for the use of our services.</p>
         
@@ -38,7 +38,7 @@ const MaxFooter = () => {
 
   const privacyContent = (
     <div className="space-y-4">
-      <h2 className="text-2xl font-bold text-[#4E204E] mb-4">Privacy Policy</h2>
+      <h2 className="text-2xl font-bold text-[#1E4A6E] mb-4">Privacy Policy</h2>
       <div className="space-y-3 text-gray-700">
         <p>At OASIS FERTILITY, we are committed to protecting your privacy and ensuring the security of your personal information.</p>
         
@@ -66,7 +66,7 @@ const MaxFooter = () => {
     <>
       <div className=' py-4 text-sm text-black flex flex-col items-center gap-2 mb-16 md:mb-0'>
         <p className=''>Copyright © 2026, OASIS FERTILITY.</p>
-        <div className='text-[#4E204E]'>
+        <div className='text-[#1E4A6E]'>
           <button 
             onClick={() => openModal('terms')}
             className='mr-2 hover:underline cursor-pointer'
@@ -107,7 +107,7 @@ const MaxFooter = () => {
             <div className="flex justify-end p-6 border-t bg-gray-50">
               <button
                 onClick={closeModal}
-                className="px-4 py-2 bg-[#4E204E] text-white rounded hover:bg-[#3d1a3d] transition-colors"
+                className="px-4 py-2 bg-[#1E4A6E] text-white rounded hover:bg-[#1a3d5c] transition-colors"
               >
                 Close
               </button>

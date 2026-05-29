@@ -204,7 +204,7 @@ function IVFClinicSliderV2({userAgentString, cityVideos }) {
             <div className="mb-6 relative">
                <div className="text-left mb-8 sm:flex sm:items-center sm:gap-8">
                     <div className="text-[55px] md:text-5xl font-bold text-primary text-opacity-50">100k+</div>
-                    <h2 className="text-[29px] md:text-3xl font-bold text-[#4E204E]">
+                    <h2 className="text-[29px] md:text-3xl font-bold text-[#1E4A6E]">
                         Trusted & Successed
                     </h2>
                 </div>
@@ -264,7 +264,7 @@ function IVFClinicSliderV2({userAgentString, cityVideos }) {
                                                     {video?.VideoTitleText}
                                                 </h4>
                                                 <p className="text-[12px] md:text-[16px] text-white mb-2 sm:mb-4">{video?.concern}</p>
-                                                <h4 className="text-[11px] md:text-sm text-[#FF9BFF] font-semibold ">
+                                                <h4 className="text-[11px] md:text-sm text-[#E8772E] font-semibold ">
                                                     {video?.lang}
                                                 </h4>
                                             </div>

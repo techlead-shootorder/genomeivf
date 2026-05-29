@@ -10,14 +10,14 @@ module.exports = {
       colors: {
         // Your existing color system
         'primary': {
-          DEFAULT: '#874487',
-          50: '#672658',
+          DEFAULT: '#2B5F8A',
+          50: '#1E4A6E',
         },
-        'secondary': '#7E3E7E',
-        'accent': '#FF8100',
+        'secondary': '#E8772E',
+        'accent': '#E8772E',
         'neutral': '#525252',
-        'bglight': '#e1d6ec',
-        'bgtransparent': '#672658f2',
+        'bglight': '#dce8f2',
+        'bgtransparent': '#1E4A6Ef2',
         
         // Oasis color system
         background: 'hsl(var(--background))',
@@ -58,7 +58,7 @@ module.exports = {
         'custom-gradient': 'linear-gradient(180deg, rgb(0 0 0 / 100%) -20%, transparent 50%, rgb(0 0 0 / 90%) 100%)',
         'custom-gradient2': 'linear-gradient(101deg, rgba(0,0,0,0.865983893557423) 5%, rgba(242,242,242,0.006039915966386533) 30%, rgba(231,234,240,0) 100%)',
         'infertility-bg-img': "url('https://images.oasisindia.in/website/Treatment/background-img.png')",
-        'announcement-bar-gradient': 'linear-gradient(90deg, #fbc2eb 18%, #f6c2eb 0, #a6c1ee 78%)',
+        'announcement-bar-gradient': 'linear-gradient(90deg, #B8D4E8 18%, #E8F0F8 0, #4A8BC2 78%)',
       },
       animation: {
         marquee: 'marquee 10s linear infinite',

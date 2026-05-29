@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const MaxReviewBar = () => {
   return (
-    <div className="hidden sm:flex absolute left-1/2 -translate-x-1/2 -bottom-10 z-20 bg-[#471847] text-white rounded-full py-6 px-10 w-[90%] max-w-7xl flex justify-between items-center shadow-lg">
+    <div className="hidden sm:flex absolute left-1/2 -translate-x-1/2 -bottom-10 z-20 bg-[#1E4A6E] text-white rounded-full py-6 px-10 w-[90%] max-w-7xl flex justify-between items-center shadow-lg">
       {/* Google */}
       <div className="flex items-center space-x-2">
         <Image src="/images/lp/lp3/google icon.png" alt="Google" width={39} height={39} className='rounded-full' />

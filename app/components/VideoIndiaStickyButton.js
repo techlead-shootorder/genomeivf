@@ -66,7 +66,7 @@ const MaxFooterSitckyButton = ({ center, service, refferal = false, isMeta, meta
                         e.preventDefault();
                         scrollToLeadForm();
                     }}
-                    className="bg-[#471847] flex justify-between items-center text-white py-2 px-2 rounded-full"
+                    className="bg-[#1E4A6E] flex justify-between items-center text-white py-2 px-2 rounded-full"
                 >
                     <button
                        onClick={handleClick}

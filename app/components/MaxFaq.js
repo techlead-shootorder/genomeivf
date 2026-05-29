@@ -73,12 +73,12 @@ const MaxFaq = ({center}) => {
     }
 
     return (
-        <section id='FAQs' className="bg-[#FFE6F18C] py-8 md:py-16 relative">
+        <section id='FAQs' className="bg-blue-50 py-8 md:py-16 relative">
             <div className="max-w-7xl mx-auto px-4">
                 {/* Header */}
                 <div className="text-left mb-8 md:flex md:justify-center md:gap-8 ">
                     <div className="text-[55px] md:text-5xl font-bold text-primary text-opacity-50">FAQs</div>
-                    <h2 className="text-[29px] md:text-3xl font-bold text-[#692F69] mb-4 md:mt-3">
+                    <h2 className="text-[29px] md:text-3xl font-bold text-[#2B5F8A] mb-4 md:mt-3">
                        about IVF Treatment in {center?.center_name ? capitalizeFirstLetter(center?.center_name) : 'India'}
                     </h2>
                 </div>

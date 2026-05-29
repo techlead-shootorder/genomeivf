@@ -47,7 +47,7 @@ const MaxAward = () => {
                 {/* Header */}
                 <div className="text-left mb-8 ">
                     <div className="text-[55px] md:text-5xl font-bold text-primary text-opacity-50">10+</div>
-                    <h2 className="text-[26px] md:text-3xl font-bold text-[#692F69] mb-4">
+                    <h2 className="text-[26px] md:text-3xl font-bold text-[#2B5F8A] mb-4">
                         Prestigious Awards,
                         Recognized as a Leader in <br />
                         the Fertility Industry
@@ -119,15 +119,15 @@ const MaxAward = () => {
                         <div className='absolute -top-20 right-6 flex gap-4'>
                             <button
                                 onClick={prevSlide}
-                                className="flex items-center justify-center border border-[#471847] rounded-full w-[30px] h-[30px] transition-colors z-10"
+                                className="flex items-center justify-center border border-[#1E4A6E] rounded-full w-[30px] h-[30px] transition-colors z-10"
                             >
-                                <ChevronLeft className="w-[20px] h-[26px] text-[#471847]" />
+                                <ChevronLeft className="w-[20px] h-[26px] text-[#1E4A6E]" />
                             </button>
                             <button
                                 onClick={nextSlide}
-                                className="flex items-center justify-center border border-[#471847] rounded-full w-[30px] h-[30px] transition-colors z-10"
+                                className="flex items-center justify-center border border-[#1E4A6E] rounded-full w-[30px] h-[30px] transition-colors z-10"
                             >
-                                <ChevronRight className="w-[20px] h-[26px] text-[#471847]" />
+                                <ChevronRight className="w-[20px] h-[26px] text-[#1E4A6E]" />
                             </button>
                         </div>
                     )}
@@ -139,7 +139,7 @@ const MaxAward = () => {
                                 <button
                                     key={index}
                                     onClick={() => setCurrentIndex(index)}
-                                    className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-[#692F69] w-[20px] h-[20px]' : 'bg-gray-300'
+                                    className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-[#2B5F8A] w-[20px] h-[20px]' : 'bg-gray-300'
                                         }`}
                                 />
                             ))}

@@ -45,9 +45,9 @@ const MaxTestimonials = () => {
                     <div className='mb-4'>
                         <div className='flex flex-col sm:flex-row sm:items-center sm:gap-8'>
                             <div className="text-[55px] md:text-[55px] font-bold mt-3 text-primary text-opacity-50">1,15,000+</div>
-                            <div className="text-[29px] font-bold mb-2 text-[#692F69]">
+                            <div className="text-[29px] font-bold mb-2 text-[#2B5F8A]">
                                 Families <span className="font-normal">We&apos;ve Helped Create</span>
-                                <div className="text-[14px] opacity-90 text-[#692F69] text-left">Many couples experience positive outcomes in their early treatment cycles</div>
+                                <div className="text-[14px] opacity-90 text-[#2B5F8A] text-left">Many couples experience positive outcomes in their early treatment cycles</div>
                             </div>
                         </div>
 
@@ -70,11 +70,11 @@ const MaxTestimonials = () => {
                                                 alt={testimonial.title}
                                                 className="w-full object-cover"
                                             />
-                                            <div className="absolute top-2 right-[18px] bg-[#471847] bg-opacity-50 text-white px-2 py-[2px] rounded-full text-sm">
+                                            <div className="absolute top-2 right-[18px] bg-[#1E4A6E] bg-opacity-50 text-white px-2 py-[2px] rounded-full text-sm">
                                                 {testimonial.count}
                                             </div>
                                         </div>
-                                        <div className="absolute bottom-4 w-fit mb-4 p-2 text-white bg-[#471847] bg-opacity-60 rounded-tr-full rounded-br-full">
+                                        <div className="absolute bottom-4 w-fit mb-4 p-2 text-white bg-[#1E4A6E] bg-opacity-60 rounded-tr-full rounded-br-full">
                                             <div className="flex items-center">
                                                 <div className="px-3 py-1 rounded-full text-[17px] font-medium">
                                                     {testimonial.title}
@@ -129,15 +129,15 @@ const MaxTestimonials = () => {
                         <div className='absolute -top-20 right-6 flex gap-4'>
                             <button
                                 onClick={prevSlide}
-                                className="flex items-center justify-center border border-[#471847] rounded-full w-[30px] h-[30px] transition-colors z-10"
+                                className="flex items-center justify-center border border-[#1E4A6E] rounded-full w-[30px] h-[30px] transition-colors z-10"
                             >
-                                <ChevronLeft className="w-[20px] h-[26px] text-[#471847]" />
+                                <ChevronLeft className="w-[20px] h-[26px] text-[#1E4A6E]" />
                             </button>
                             <button
                                 onClick={nextSlide}
-                                className="flex items-center justify-center border border-[#471847] rounded-full w-[30px] h-[30px] transition-colors z-10"
+                                className="flex items-center justify-center border border-[#1E4A6E] rounded-full w-[30px] h-[30px] transition-colors z-10"
                             >
-                                <ChevronRight className="w-[20px] h-[26px] text-[#471847]" />
+                                <ChevronRight className="w-[20px] h-[26px] text-[#1E4A6E]" />
                             </button>
                         </div>
                     </div>

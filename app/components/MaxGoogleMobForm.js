@@ -242,7 +242,7 @@ const MaxGoogleMobForm = ({ formatService, isInhouse }) => {
 
   
   return (
-    <div className={`md:hidden relative max-w-sm mx-auto rounded-[20px] bg-[#FFE6F1] z-[8] mb-10 ${isInhouse ? 'mt-[20px]' : ''}`}>
+    <div className={`md:hidden relative max-w-sm mx-auto rounded-[20px] bg-blue-100 z-[8] mb-10 ${isInhouse ? 'mt-[20px]' : ''}`}>
       {/* Header */}
       <div className="flex justify-center">
         <div className="bg-[url('/images/lp/maxlp/rectangle.png')] bg-cover bg-center h-[53px] w-[254px]">
@@ -350,7 +350,7 @@ const MaxGoogleMobForm = ({ formatService, isInhouse }) => {
               disabled={isSubmitting || !isFormValid()}
               className={`${isSubmitting || !isFormValid()
                 ? 'bg-gray-400 cursor-not-allowed'
-                : 'bg-[#F77B2F] hover:bg-[#e66b1f]'
+                : 'bg-[#E8772E] hover:bg-[#d06a28]'
                 } text-white font-semibold py-2 w-full rounded-full flex flex-col items-center justify-center transition-colors duration-200`}
             >
               {isSubmitting ? (
@@ -373,7 +373,7 @@ const MaxGoogleMobForm = ({ formatService, isInhouse }) => {
         </div>
 
         {/* Footer Note */}
-        <div className="py-4 text-[#692F69] flex items-start gap-3 text-sm">
+        <div className="py-4 text-[#2B5F8A] flex items-start gap-3 text-sm">
           <img src="/images/lp/maxlp/shield.png" className="" width={29} height={31} />
           <span className="text-[12px]">
             We keep your data <strong>100% safe</strong>. By submitting, you accept our{" "}

@@ -132,7 +132,7 @@ const HeroHeading = memo(({ formatService }) => (
     <div className="mt-3 sm:mt-4">
       <div className="bg-primary px-3 py-2 sm:px-4 sm:py-3 rounded-lg shadow-lg border border-white">
         <div className="flex items-center justify-center">
-          <div className="bg-[#FFE6F1] text-black px-2 py-1 rounded-full text-[10px] sm:text-xs font-bold mr-2 shadow-md">
+          <div className="bg-blue-100 text-black px-2 py-1 rounded-full text-[10px] sm:text-xs font-bold mr-2 shadow-md">
             FREE
           </div>
           <div className="text-white text-center">
@@ -181,7 +181,7 @@ const MobileLeadForm = memo(({ formatService, isMeta }) => (
   <div id="leadformlp3" className="md:hidden flex items-center -mt-[60px] w-full">
     <div className="flex flex-col items-center w-full">
       <div className="flex justify-center w-full">
-        {/* <div className="bg-[#874487] text-white w-[80%] text-center py-0.5 rounded-t-2xl font-semibold z-50">
+        {/* <div className="bg-[#2B5F8A] text-white w-[80%] text-center py-0.5 rounded-t-2xl font-semibold z-50">
           IVF @ 94,999* &nbsp; | &nbsp; LIMITED VALIDITY
         </div> */}
       </div>

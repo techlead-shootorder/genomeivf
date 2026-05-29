@@ -48,7 +48,7 @@ const Page = memo(() => {
                 <DynamicComponents.MaxTreatment isMeta={isMeta} />
             </Suspense>
 
-            <div className='bg-pink-50'>
+            <div className='bg-gray-50'>
                 <Suspense fallback={<ComponentLoader />}>
                     <DynamicComponents.MaxTrusted
                         center={filteredCity}

@@ -49,7 +49,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             title: "IVF (In Vitro Fertilization)",
             description: "IVF combines eggs and sperm in a lab for precise fertilization and embryo transfer. Choose Oasis for advanced tech, expert care, and personalized solutions, ensuring your best chance at parenthood.",
             image: "/images/lp/treatments/updated/Infertility_Treatments/IVF.webp",
-            gradient: "from-pink-200 via-purple-300 to-purple-500",
+            gradient: "from-blue-200 via-blue-400 to-blue-600",
             category: "IVF"
         },
         {
@@ -57,7 +57,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             title: "Drug Free IVF (IVM)",
             description: "IVM (In-Vitro Maturation) nurtures immature eggs in the lab, reducing hormonal impact. Oasis excels with precision technology, trusted specialists, and individualized care for a safer, more effective fertility journey.",
             image: "/images/lp/treatments/updated/Infertility_Treatments/IVM.webp",
-            gradient: "from-blue-400 via-purple-400 to-purple-600",
+            gradient: "from-blue-400 via-blue-500 to-blue-600",
             category: "IVF"
         },
         {
@@ -65,7 +65,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             title: "ICSI Treatment",
             description: "ICSI (Intracytoplasmic Sperm Injection) involves injecting a single sperm directly into an egg. This advanced IVF technique is ideal for male factor infertility and severe fertility issues.",
             image: "/images/lp/treatments/updated/Infertility_Treatments/IVF.webp",
-            gradient: "from-purple-300 via-pink-400 to-purple-500",
+            gradient: "from-blue-300 via-orange-400 to-blue-500",
             category: "IVF"
         },
         {
@@ -81,7 +81,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             title: "IUI Treatment",
             description: "IUI (Intrauterine Insemination) places prepared sperm directly into the uterus during ovulation. A less invasive option with higher success rates when combined with expert timing and care.",
             image: "/images/lp/treatments/updated/Infertility_Treatments/IVF.webp",
-            gradient: "from-green-300 via-blue-400 to-purple-500",
+            gradient: "from-green-300 via-blue-400 to-blue-500",
             category: "IUI"
         },
         {
@@ -97,7 +97,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             title: "Genetic Testing (PGT)",
             description: "Preimplantation Genetic Testing screens embryos for genetic abnormalities before transfer. This advanced technique increases success rates and reduces miscarriage risk.",
             image: "/images/lp/treatments/updated/Infertility_Treatments/IVF.webp",
-            gradient: "from-orange-300 via-pink-400 to-purple-500",
+            gradient: "from-orange-300 via-orange-400 to-blue-500",
             category: "Other"
         },
         {
@@ -105,7 +105,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             title: "Egg Freezing",
             description: "Egg freezing preserves your fertility for the future. Advanced vitrification techniques ensure high survival rates when you're ready to conceive.",
             image: "/images/lp/treatments/updated/Infertility_Treatments/IVF.webp",
-            gradient: "from-cyan-300 via-blue-400 to-purple-500",
+            gradient: "from-cyan-300 via-blue-400 to-blue-500",
             category: "Other"
         },
         {
@@ -113,7 +113,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             title: "Donor Programs",
             description: "Comprehensive donor egg, sperm, and embryo programs with extensive screening. Our donor programs offer hope when other treatments aren't suitable.",
             image: "/images/lp/treatments/updated/Infertility_Treatments/IVF.webp",
-            gradient: "from-pink-300 via-purple-400 to-indigo-500",
+            gradient: "from-blue-300 via-blue-400 to-blue-500",
             category: "Other"
         }
     ];
@@ -147,21 +147,21 @@ const MaxTreatment = ({ service, isMeta, center }) => {
                     {/* Header */}
                     <div className="text-left mb-8 sm:flex sm:items-center sm:gap-8">
                         <div className="text-[55px] font-bold text-primary text-opacity-50">20+</div>
-                        <h1 className="text-[29px] font-bold text-[#4E204E]">
+                        <h1 className="text-[29px] font-bold text-[#1E4A6E]">
                             Treatments Available
                         </h1>
                     </div>
 
                     {/* Treatment Categories */}
                     <div className="flex justify-center mb-8">
-                        <div className='bg-pink-100 p-1 rounded-full'>
+                        <div className='bg-blue-100 p-1 rounded-full'>
                             {tabs.map((tab) => (
                                 <button
                                     key={tab.id}
                                     onClick={() => handleTabClick(tab.id)}
                                     className={`px-4 md:px-0 py-[6px] sm:py-2 rounded-full font-semibold text-[14px] sm:text-sm transition-colors w-[96px] ${activeTab === tab.id
-                                        ? 'bg-[#4E204E] text-white'
-                                        : 'text-[#4E204E] hover:bg-pink-50'
+                                        ? 'bg-[#1E4A6E] text-white'
+                                        : 'text-[#1E4A6E] hover:bg-blue-50'
                                         }`}
                                 >
                                     {tab.label}
@@ -176,7 +176,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
                             <div className="flex space-x-4 pb-4" style={{ width: 'max-content' }}>
                                 {filteredTreatments.map((treatment) => (
                                     <div key={treatment.id} className="flex-shrink-0 w-[174px]">
-                                        <div className="bg-[#FFE6F159] p-2 rounded-2xl shadow-sm overflow-hidden flex flex-col h-[374px]">
+                                        <div className="bg-blue-100 bg-opacity-50 p-2 rounded-2xl shadow-sm overflow-hidden flex flex-col h-[374px]">
                                             {/* Image container with fixed height */}
                                             <img
                                                 src={treatment.image}
@@ -186,7 +186,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
 
                                             {/* Content container */}
                                             <div className="mt-4 px-1 pb-2 flex-1 flex flex-col">
-                                                <h3 className="text-sm font-bold text-[#4E204E] mb-2 line-clamp-2 leading-tight">
+                                                <h3 className="text-sm font-bold text-[#1E4A6E] mb-2 line-clamp-2 leading-tight">
                                                     {treatment.title}
                                                 </h3>
                                                 <p className="text-xs text-gray-600 leading-relaxed flex-1">
@@ -209,7 +209,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
                             >
                                 {filteredTreatments.map((treatment) => (
                                     <div key={treatment.id} className="flex-shrink-0 w-1/2 ">
-                                        <div className="bg-[#FFE6F159] rounded-2xl  overflow-hidden mx-6 h-[380px] flex flex-col">
+                                        <div className="bg-blue-100 bg-opacity-50 rounded-2xl  overflow-hidden mx-6 h-[380px] flex flex-col">
                                             {/* Image container */}
                                             <div className="h-[180px] relative overflow-hidden p-4">
                                                 <img
@@ -241,15 +241,15 @@ const MaxTreatment = ({ service, isMeta, center }) => {
                             <div className='absolute -top-40 right-6 flex gap-4'>
                                 <button
                                     onClick={prevSlide}
-                                    className="flex items-center justify-center border border-[#471847] rounded-full w-[30px] h-[30px] transition-colors z-10"
+                                    className="flex items-center justify-center border border-[#1E4A6E] rounded-full w-[30px] h-[30px] transition-colors z-10"
                                 >
-                                    <ChevronLeft className="w-[20px] h-[26px] text-[#471847]" />
+                                    <ChevronLeft className="w-[20px] h-[26px] text-[#1E4A6E]" />
                                 </button>
                                 <button
                                     onClick={nextSlide}
-                                    className="flex items-center justify-center border border-[#471847] rounded-full w-[30px] h-[30px] transition-colors z-10"
+                                    className="flex items-center justify-center border border-[#1E4A6E] rounded-full w-[30px] h-[30px] transition-colors z-10"
                                 >
-                                    <ChevronRight className="w-[20px] h-[26px] text-[#471847]" />
+                                    <ChevronRight className="w-[20px] h-[26px] text-[#1E4A6E]" />
                                 </button>
                             </div>
                         )}
@@ -257,7 +257,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
 
                     {/* Bottom CTA Section */}
                     <div className="text-center mt-4 md:mt-10 mb-4">
-                        <div className="text-[18px] sm:text-lg font-semibold text-[#4E204E] mb-4 px-4">
+                        <div className="text-[18px] sm:text-lg font-semibold text-[#1E4A6E] mb-4 px-4">
                             Confused <br className='visible md:hidden' /> Which Treatment is Best for You?
                         </div>
                         
@@ -265,7 +265,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
                             {/* Desktop: Show popup button */}
                             <button
                                 className="hidden md:flex text-white px-10 sm:px-8 py-3 rounded-full font-medium text-base sm:text-lg transition-shadow items-center space-x-2 mx-auto"
-                                style={{ backgroundColor: '#F77B2F' }}
+                                style={{ backgroundColor: '#E8772E' }}
                                 onClick={() => setShowPopup(true)}
                             >
                                 <img src='/images/lp/maxlp/white-call-icon.png' width={21} height={21} />
@@ -281,7 +281,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
                                     scrollToLeadForm();
                                 }}
                                 className="md:hidden flex w-fit items-center justify-center gap-2 text-white px-10 sm:px-8 py-3 rounded-full font-medium text-base sm:text-lg transition-shadow mx-auto"
-                                style={{ backgroundColor: '#F77B2F' }}
+                                style={{ backgroundColor: '#E8772E' }}
                             >
                                 <img
                                     src="/images/lp/maxlp/white-call-icon.png"
