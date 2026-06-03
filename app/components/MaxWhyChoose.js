@@ -109,8 +109,8 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
             <section className="py-8 pb-16 md:pb-20 md:py-16">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="block md:hidden text-left mb-8 ml-4">
-                        <h1 className='text-[50px] md:text-[55px] font-bold text-primary text-opacity-50'>Why Choose</h1>
-                        <h2 className='text-[26px] md:text-3xl font-bold text-[#2B5F8A]'>Oasis Fertility {displayCity}</h2>
+                        <h1 className='text-[40px] md:text-[55px] font-bold text-primary text-opacity-50'>Why</h1>
+                        <h2 className='text-[22px] md:text-3xl font-bold text-[#2B5F8A]'>Oasis Fertility + Genome</h2>
 
                         <div className='mt-4'>
                             <p>Choose Oasis Fertility for advanced tech, expert care, and personalized fertility solutions, ensuring your best chance at parenthood.</p>
