@@ -16,16 +16,16 @@
       "id": "1",
       "fullname": "Dr. Sujoy Dasgupta",
       "designation": "Fertility Specialist",
-      "experience": "15+ Yrs",
+      "experience": "17+ Yrs",
       "qualification": "MBBS, MS",
       "docterImage": "sujoy-dasgupta.webp",
-      "practoRating": "4.9"
+      "practoRating": "5.0"
     },
     {
       "id": "2",
       "fullname": "Dr. Sabnam Parvin",
       "designation": "Fertility Specialist",
-      "experience": "12+ Yrs",
+      "experience": "14+ Yrs",
       "qualification": "MBBS, DNB, FNB",
       "docterImage": "sabnam-parvin.jpg",
       "practoRating": "4.8"
@@ -34,19 +34,19 @@
       "id": "3",
       "fullname": "Dr. Sohini Munshi",
       "designation": "Fertility Specialist",
-      "experience": "18+ Yrs",
+      "experience": "14+ Yrs",
       "qualification": "MBBS, MS(Obs & Gyn), DNB, MRCOG",
       "docterImage": "sohini-munshi.jpg",
-      "practoRating": "4.9"
+      "practoRating": "4.5"
     },
     {
       "id": "4",
       "fullname": "Dr. Sudip Samanta",
       "designation": "Fertility Specialist",
-      "experience": "20+ Yrs",
+      "experience": "14+ Yrs",
       "qualification": "MBBS, MS, DNB, MRCOG, FMAS, FRM",
       "docterImage": "sudip-samanta.jpg",
-      "practoRating": "5.0"
+      "practoRating": "4.5"
     }
   ],
   "reviews": [
@@ -119,17 +119,17 @@
       "id": 1,
       "fullname": "Dr. Sujoy Dasgupta",
       "designation": "Fertility Specialist",
-      "experience": "15+ Yrs",
+      "experience": "17+ Yrs",
       "docterImage": "sujoy-dasgupta.webp",
       "master_id": "34",
       "qualification": "MBBS, MS",
-      "practoRating": "4.9"
+      "practoRating": "5.0"
     },
     {
       "id": 2,
       "fullname": "Dr. Sabnam Parvin",
       "designation": "Fertility Specialist",
-      "experience": "12+ Yrs",
+      "experience": "14+ Yrs",
       "docterImage": "sabnam-parvin.jpg",
       "master_id": "34",
       "qualification": "MBBS, DNB, FNB",
@@ -139,21 +139,21 @@
       "id": 3,
       "fullname": "Dr. Sohini Munshi",
       "designation": "Fertility Specialist",
-      "experience": "18+ Yrs",
+      "experience": "14+ Yrs",
       "docterImage": "sohini-munshi.jpg",
       "master_id": "34",
       "qualification": "MBBS, MS(Obs & Gyn), DNB, MRCOG",
-      "practoRating": "4.9"
+      "practoRating": "4.5"
     },
     {
       "id": 4,
       "fullname": "Dr. Sudip Samanta",
       "designation": "Fertility Specialist",
-      "experience": "20+ Yrs",
+      "experience": "14+ Yrs",
       "docterImage": "sudip-samanta.jpg",
       "master_id": "34",
       "qualification": "MBBS, MS, DNB, MRCOG, FMAS, FRM",
-      "practoRating": "5.0"
+      "practoRating": "4.5"
     }
   ],
   "videos": [
