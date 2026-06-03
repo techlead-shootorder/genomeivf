@@ -4,17 +4,25 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import MaxTabs from '@/app/components/MaxTabs'
 import MaxFertilityMessage from './Maxfertilitymessage';
 
-// Static gallery images for India LP (default set)
+// Static gallery images from all centers
 const galleryImages = [
-    { id: 3, image: "/images/home/gallery/3.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "3/12" },
-    { id: 5, image: "/images/home/gallery/5.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "5/12" },
-    { id: 6, image: "/images/home/gallery/6.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "6/12" },
-    { id: 7, image: "/images/home/gallery/7.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "7/12" },
-    { id: 8, image: "/images/home/gallery/8.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "8/12" },
-    { id: 9, image: "/images/home/gallery/9.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "9/12" },
-    { id: 10, image: "/images/home/gallery/10.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "10/12" },
-    { id: 11, image: "/images/home/gallery/11.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "11/12" },
-    { id: 12, image: "/images/home/gallery/12.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "12/12" },
+    { id: 1, image: "/images/gallery/Hyderabad/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "1/17" },
+    { id: 2, image: "/images/gallery/Gachibowli/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "2/17" },
+    { id: 3, image: "/images/gallery/Dilshuknagar/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "3/17" },
+    { id: 4, image: "/images/gallery/Vijayawada/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "4/17" },
+    { id: 5, image: "/images/gallery/Vizag/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "5/17" },
+    { id: 6, image: "/images/gallery/Guntur/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "6/17" },
+    { id: 7, image: "/images/gallery/Hanamkonda/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "7/17" },
+    { id: 8, image: "/images/gallery/Pune/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "8/17" },
+    { id: 9, image: "/images/gallery/Wakad/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "9/17" },
+    { id: 10, image: "/images/gallery/Kharadi/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "10/17" },
+    { id: 11, image: "/images/gallery/Nashik/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "11/17" },
+    { id: 12, image: "/images/gallery/Ongole/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "12/17" },
+    { id: 13, image: "/images/gallery/Uppal/01.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "13/17" },
+    { id: 14, image: "/images/gallery/Secunderabad/1.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "14/17" },
+    { id: 15, image: "/images/gallery/Kurnool/1.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "15/17" },
+    { id: 16, image: "/images/gallery/Ranchi/1.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "16/17" },
+    { id: 17, image: "/images/gallery/Hyderabad/02.webp", title: "1st attempt", subtitle: "Healthy Baby", count: "17/17" },
 ];
 
 const MaxTestimonials = () => {
@@ -74,17 +82,6 @@ const MaxTestimonials = () => {
                                                 {testimonial.count}
                                             </div>
                                         </div>
-                                        <div className="absolute bottom-4 w-fit mb-4 p-2 text-white bg-[#1E4A6E] bg-opacity-60 rounded-tr-full rounded-br-full">
-                                            <div className="flex items-center">
-                                                <div className="px-3 py-1 rounded-full text-[17px] font-medium">
-                                                    {testimonial.title}
-                                                </div>
-                                                |
-                                                <div className="px-3 py-1 rounded-full text-[17px] font-medium">
-                                                    {testimonial.subtitle}
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -107,17 +104,6 @@ const MaxTestimonials = () => {
                                                     alt={testimonial.title}
                                                     className="w-full md:[280px] lg:h-[300px] object-cover"
                                                 />
-                                            </div>
-                                            <div className="absolute bottom-4 w-fit mb-4 p-2 text-white bg-primary bg-opacity-50 rounded-tr-full rounded-br-full">
-                                                <div className="flex items-center text-nowrap">
-                                                    <div className="px-3 py-1 rounded-full text-sm font-medium">
-                                                        {testimonial.title}
-                                                    </div>
-                                                    |
-                                                    <div className="px-3 py-1 rounded-full text-sm font-medium">
-                                                        {testimonial.subtitle}
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>

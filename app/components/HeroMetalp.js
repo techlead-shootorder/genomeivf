@@ -34,7 +34,7 @@ const LOCATION_BANNERS = {
   // Default banner
   default: {
     desktop: {
-      src: "/images/lp/lp2/desk-banner/Landing-Page-Banners_2_Feb.webp",
+      src: "/images/lp/lp2/desk-banner/Landing-Page-Banners.webp",
       width: 1728,
       height: 787,
       className: "w-full object-cover absolute left-0 top-0 hidden md:block h-full",
@@ -42,7 +42,7 @@ const LOCATION_BANNERS = {
       sizes: "(min-width: 768px) 100vw, 0vw"
     },
     mobile: {
-      src: "/images/lp/lp1/mob-banner/Landing-Page-Banners_Mobile.webp",
+      src: "/images/lp/lp2/mobile-banner/Landing-Page-Banners_Mobile.webp",
       width: 428,
       height: 452,
       className: "w-full object-cover absolute left-0 -top-[0px] md:hidden h-full",
