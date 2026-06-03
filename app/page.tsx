@@ -72,9 +72,9 @@ const Page = memo(() => {
                 <DynamicComponents.MaxReviewSection />
             </Suspense>
 
-            <Suspense fallback={<ComponentLoader />}>
+            {/* <Suspense fallback={<ComponentLoader />}>
                 <DynamicComponents.MaxAward />
-            </Suspense>
+            </Suspense> */}
 
             <Suspense fallback={<ComponentLoader />}>
                 <DynamicComponents.MaxFaq />

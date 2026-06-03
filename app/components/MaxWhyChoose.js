@@ -108,12 +108,12 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
         <>
             <section className="py-8 pb-16 md:pb-20 md:py-16">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="block md:hidden text-left mb-8 ml-4">
-                        <h1 className='text-[50px] md:text-[55px] font-bold text-primary text-opacity-50'>Why Choose</h1>
-                        <h2 className='text-[26px] md:text-3xl font-bold text-[#2B5F8A]'>Oasis Fertility {displayCity}</h2>
+                    <div className="block md:hidden text-left mb-8">
+                        <h1 className='text-[34px] font-bold text-secondary whitespace-nowrap'>Why Oasis Fertility + Genome</h1>
+                        <h2 className='text-[26px] md:text-3xl font-bold text-[#2B5F8A]'>Trusted Fertility Care, Now Stronger Together</h2>
 
                         <div className='mt-4'>
-                            <p>Choose Oasis Fertility for advanced tech, expert care, and personalized fertility solutions, ensuring your best chance at parenthood.</p>
+                            <p>For over two decades, Genome IVF has been one of Kolkata’s trusted names in fertility care. Now, as part of Oasis Fertility, patients can access enhanced fertility expertise, advanced reproductive technology, and comprehensive fertility solutions — while continuing to receive the compassionate care they trust.</p>
                         </div>
                     </div>
 
@@ -122,14 +122,14 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
                         <div className="">
                             <div className=' flex  md:gap-10 lg:gap-20 w-full '>
                                 {/* Header, Description and CTA */}
-                                <div className='hidden md:flex  flex-col gap-8 w-[400px]'>
+                                <div className='hidden md:flex  flex-col gap-8 w-[600px]'>
                                     <div>
-                                        <h1 className='text-5xl md:text-5xl font-bold text-primary text-opacity-50 mb-2'>Why Choose</h1>
-                                        <h2 className='text-2xl md:text-3xl font-bold text-primary'>Oasis Fertility {displayCity}</h2>
+                                        <h1 className='text-4xl md:text-4xl font-bold text-secondary mb-2 whitespace-nowrap'>Why Oasis Fertility + Genome</h1>
+                                        <h2 className='text-2xl md:text-3xl font-bold text-primary'>Trusted Fertility Care, Now Stronger Together</h2>
                                     </div>
 
                                     <div>
-                                        <p>Choose Oasis Fertility for advanced tech, expert care, and personalized fertility solutions, ensuring your best chance at parenthood.</p>
+                                        <p>For over two decades, Genome IVF has been one of Kolkata’s trusted names in fertility care. Now, as part of Oasis Fertility, patients can access enhanced fertility expertise, advanced reproductive technology, and comprehensive fertility solutions — while continuing to receive the compassionate care they trust.</p>
                                     </div>
                                     <div className=" flex items-start space-x-8">
                                         <div className="flex-shrink-0">
@@ -167,7 +167,7 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
                                         <div className='flex'>
                                             <div className='h-[100px] w-[55px] text-white bg-[#163D5C] flex justify-center items-center p-4'></div>
                                             <div className='h-[100px] text-white bg-[#1E4A6E] w-full flex items-center px-2'>
-                                                <img src="https://genomeivf.com/images/logo.png" alt='Genome IVF logo' height={54} width={125} className='object-contain' />
+                                                <img src="https://genomeivf.com/images/logo.png" alt='Genome IVF logo' height={54} width={125} className='object-contain brightness-0 invert' />
                                             </div>
                                         </div>
                                         {oasisData.map((item, index) => (

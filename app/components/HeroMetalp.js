@@ -114,14 +114,14 @@ const HeroHeading = memo(({ formatService }) => (
     <div className="bg-[#FFC5DF78] px-2 py-2 sm:px-6 sm:py-2 rounded-full flex items-center justify-center space-x-4">
      
       <div className="flex items-center space-x-2">
-        <span className="text-[14px] sm:text-2xl font-bold text-gray-800">50+</span>
+        <span className="text-[14px] sm:text-2xl font-bold text-secondary">50+</span>
         <span className="text-[10px] sm:text-[12px] text-gray-800 font-bold mt-1">Expert <br /> Doctors</span>
       </div>
       
       <div className="w-px h-8 bg-gray-800"></div>
       
       <div className="flex items-center space-x-2">
-        <span className="text-[14px] sm:text-2xl font-bold text-gray-800">1 Lac+</span>
+        <span className="text-[14px] sm:text-2xl font-bold text-secondary">1 Lac+</span>
         <div className="text-sm text-gray-800">
           <div className="font-bold text-[10px] sm:text-[12px] leading-tight">Healthy Babies with <br /> {formatService} Treatment</div>
         </div>

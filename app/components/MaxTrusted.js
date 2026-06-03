@@ -203,11 +203,11 @@ function IVFClinicSliderV2({userAgentString, cityVideos }) {
         <div id='Testimonials' className=" max-w-7xl mx-auto px-4 lg:px-10 xl:px-14 2xl:px-20  py-8 xl:py-10 rounded-3xl">
             <div className="mb-6 relative">
                <div className="text-left mb-8 sm:flex sm:items-center sm:gap-8">
-                    <div className="text-[55px] md:text-5xl font-bold text-primary text-opacity-50">100k+</div>
-                    <h2 className="text-[29px] md:text-3xl font-bold text-[#1E4A6E]">
-                        Trusted & Successed
-                    </h2>
-                </div>
+                   <div className="text-[55px] md:text-5xl font-bold text-secondary">70K+</div>
+                   <h2 className="text-[29px] md:text-3xl font-bold text-[#1E4A6E]">
+                       Trusted & Successed
+                   </h2>
+               </div>
 
                 <Carousel 
                     responsive={responsive} 

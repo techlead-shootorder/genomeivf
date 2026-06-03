@@ -246,13 +246,13 @@ const MaxGoogleDeskForm = ({ formatService, isInhouse }) => {
   return (
     <div className={`hidden md:block relative max-w-sm mx-auto rounded-[20px] bg-blue-100 z-10 ${isInhouse ? 'mt-[60px]' : 'mt-10'}`}>
       {/* Header */}
-      <div className="flex justify-center">
-        <div className="bg-[url('/images/lp/maxlp/rectangle.png')] bg-cover bg-center h-[53px] w-[254px]">
-          <div className="">
-            <h1 className="text-white text-[20px] font-bold text-center">
+      <div className="flex justify-center -mt-6">
+        <div className="bg-[url('/images/lp/maxlp/orange-bg.png')] bg-cover bg-no-repeat bg-center h-[44px] w-full max-w-[240px] flex flex-col items-center justify-center rounded-t-[20px]">
+          <div className="text-center">
+            <h1 className="text-white text-[16px] font-bold leading-tight">
               Free Consultation
             </h1>
-            <p className="text-[11px] font-normal text-white text-center">with senior {['ivf', 'iui', 'fertility'].includes(formatService?.toLowerCase()) ? formatService : 'IVF'} Specialist</p>
+            <p className="text-[10px] font-normal text-white">with senior {['ivf', 'iui', 'fertility'].includes(formatService?.toLowerCase()) ? formatService : 'IVF'} Specialist</p>
           </div>
         </div>
       </div>
@@ -270,7 +270,7 @@ const MaxGoogleDeskForm = ({ formatService, isInhouse }) => {
           {/* Full Name */}
           <div className="flex items-center border-b border-[#5E2671] pb-1 mb-8">
             <img
-              src="/images/lp/maxlp/profile.png"
+              src="/images/lp/maxlp/profile-orange.png"
               alt="Profile"
               className="w-[32px] h-[32px] mr-4 object-contain"
             />
@@ -345,8 +345,8 @@ const MaxGoogleDeskForm = ({ formatService, isInhouse }) => {
               onClick={handleSubmit}
               disabled={isSubmitting || !isFormValid()}
               className={`${isSubmitting || !isFormValid()
-                ? 'bg-gray-400 cursor-not-allowed'
-                : 'bg-[#E8772E] hover:bg-[#d06a28]'
+                ? 'bg-secondary cursor-not-allowed opacity-70'
+                : 'bg-secondary hover:bg-[#d06a28]'
                 } text-white font-bold py-2 px-[10px] w-[308px] rounded-full flex items-center justify-between transition-colors duration-200`}
             >
               {isSubmitting ? (
@@ -358,7 +358,7 @@ const MaxGoogleDeskForm = ({ formatService, isInhouse }) => {
                   <p className="text-[20px] ml-8 leading-tight">
                     Get a Call Back
                   </p>
-                  <span className="bg-white text-[#50AF35] font-medium text-[14px] px-2 py-1 rounded-full">Within 1 min</span>
+                  <span className="bg-white text-[#E8772E] font-medium text-[14px] px-2 py-1 rounded-full">Within 1 min</span>
                 </>
               )}
             </button>

@@ -9,12 +9,12 @@ const PhoneSection = memo(() => {
     return (
         <div className="number flex items-center gap-2 md:mr-[40px] lg:mr-[60px] xl:mr-[100px]">
 
-            <div className=" sm:mr-0 bg-white flex items-center px-2 py-1 rounded-full gap-1">
-                <MdCall className="text-[22px] sm:text-[30px] text-primary" />
+            <div className=" sm:mr-0 bg-primary flex items-center px-3 py-2 rounded-full gap-1">
+                <MdCall className="text-[20px] sm:text-[24px] text-white" />
 
                 <Link
                     href={`tel:${PhoneNum}`}
-                    className=" text-primary font-semibold text-[14px] sm:text-[16px] leading-none"
+                    className=" text-white font-semibold text-[14px] sm:text-[16px] leading-none"
                 >
                     {PhoneNum}
                 </Link>

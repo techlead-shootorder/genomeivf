@@ -47,7 +47,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
         {
             id: 1,
             title: "IVF (In Vitro Fertilization)",
-            description: "IVF combines eggs and sperm in a lab for precise fertilization and embryo transfer. Choose Oasis for advanced tech, expert care, and personalized solutions, ensuring your best chance at parenthood.",
+            description: "IVF combines eggs and sperm in a lab for precise fertilization and embryo transfer. Choose Oasis Fertility + Genome for advanced tech, expert care, and personalized solutions, ensuring your best chance at parenthood.",
             image: "/images/lp/treatments/updated/Infertility_Treatments/IVF.webp",
             gradient: "from-blue-200 via-blue-400 to-blue-600",
             category: "IVF"
@@ -55,7 +55,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
         {
             id: 2,
             title: "Drug Free IVF (IVM)",
-            description: "IVM (In-Vitro Maturation) nurtures immature eggs in the lab, reducing hormonal impact. Oasis excels with precision technology, trusted specialists, and individualized care for a safer, more effective fertility journey.",
+            description: "IVM (In-Vitro Maturation) nurtures immature eggs in the lab, reducing hormonal impact. Oasis Fertility + Genome excels with precision technology, trusted specialists, and individualized care for a safer, more effective fertility journey.",
             image: "/images/lp/treatments/updated/Infertility_Treatments/IVM.webp",
             gradient: "from-blue-400 via-blue-500 to-blue-600",
             category: "IVF"
@@ -146,7 +146,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6">
                     {/* Header */}
                     <div className="text-left mb-8 sm:flex sm:items-center sm:gap-8">
-                        <div className="text-[55px] font-bold text-primary text-opacity-50">20+</div>
+                        <div className="text-[55px] font-bold text-secondary">20+</div>
                         <h1 className="text-[29px] font-bold text-[#1E4A6E]">
                             Treatments Available
                         </h1>
@@ -303,7 +303,6 @@ const MaxTreatment = ({ service, isMeta, center }) => {
                     isOpen={showPopup}
                     onClose={() => setShowPopup(false)}
                 />
-            ) : (
         </>
     );
 };

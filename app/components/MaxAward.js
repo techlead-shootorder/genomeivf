@@ -46,7 +46,7 @@ const MaxAward = () => {
             <div className="max-w-7xl mx-auto px-4">
                 {/* Header */}
                 <div className="text-left mb-8 ">
-                    <div className="text-[55px] md:text-5xl font-bold text-primary text-opacity-50">10+</div>
+                    <div className="text-[55px] md:text-5xl font-bold text-secondary">10+</div>
                     <h2 className="text-[26px] md:text-3xl font-bold text-[#2B5F8A] mb-4">
                         Prestigious Awards,
                         Recognized as a Leader in <br />

@@ -390,7 +390,7 @@ const MaxGooglePeekBoo = ({ isOpen, onClose }) => {
                           className="w-6 h-6 ml-1"
                         />
                         <span>Get a Call Back</span>
-                        <span className="bg-white text-black px-3 py-2 rounded-full text-sm font-medium">
+                        <span className="bg-white text-[#E8772E] px-3 py-2 rounded-full text-sm font-medium">
                           Within 1 min
                         </span>
                       </>

@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.facebook.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+      },
     ],
     unoptimized: true,
   },

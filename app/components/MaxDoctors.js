@@ -179,7 +179,7 @@ const MaxDoctors = ({center, filteredDoctors, service, isMeta }) => {
             <section id='Doctors' className="bg-gray-50 py-8 md:py-16">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="text-left mb-8 sm:flex sm:items-center sm:gap-8">
-                        <div className="text-[55px] font-bold text-primary text-opacity-50">50+</div>
+                        <div className="text-[55px] font-bold text-secondary">50+</div>
                         <h1 className="text-[29px] font-bold text-[#1E4A6E]">
                             Expert IVF Doctors & Fertility Specialists in {displayCity}
                         </h1>
@@ -276,7 +276,6 @@ const MaxDoctors = ({center, filteredDoctors, service, isMeta }) => {
                     isOpen={showPopup}
                     onClose={() => setShowPopup(false)}
                 />
-            ) : (
         </>
     );
 };

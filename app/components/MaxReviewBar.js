@@ -12,7 +12,7 @@ const MaxReviewBar = () => {
             <span className="font-semibold mr-2 text-[18px]">4.9</span>
            <img src='/images/lp/maxlp/rating-stars-4.png' width={100} height={18}/>
           </div>
-          <div className="text-xs text-white">25087+ Verified Reviews</div>
+          <div className="text-xs text-white">52000+ Verified Reviews</div>
         </div>
       </div>
 

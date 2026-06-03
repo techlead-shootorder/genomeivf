@@ -244,13 +244,13 @@ const MaxGoogleMobForm = ({ formatService, isInhouse }) => {
   return (
     <div className={`md:hidden relative max-w-sm mx-auto rounded-[20px] bg-blue-100 z-[8] mb-10 ${isInhouse ? 'mt-[20px]' : ''}`}>
       {/* Header */}
-      <div className="flex justify-center">
-        <div className="bg-[url('/images/lp/maxlp/rectangle.png')] bg-cover bg-center h-[53px] w-[254px]">
-          <div className="">
-            <h1 className="text-white text-[20px] font-semibold text-center">
+      <div className="flex justify-center -mt-6">
+        <div className="bg-[url('/images/lp/maxlp/orange-bg.png')] bg-cover bg-no-repeat bg-center h-[44px] w-full max-w-[240px] flex flex-col items-center justify-center rounded-t-[20px]">
+          <div className="text-center">
+            <h1 className="text-white text-[16px] font-semibold leading-tight">
               Free Consultation
             </h1>
-            <p className="text-[11px] font-normal text-white text-center">with senior {['ivf', 'iui', 'fertility'].includes(formatService?.toLowerCase()) ? formatService : 'IVF'} Specialist</p>
+            <p className="text-[10px] font-normal text-white">with senior {['ivf', 'iui', 'fertility'].includes(formatService?.toLowerCase()) ? formatService : 'IVF'} Specialist</p>
           </div>
         </div>
       </div>
@@ -275,7 +275,7 @@ const MaxGoogleMobForm = ({ formatService, isInhouse }) => {
           {/* Full Name */}
           <div className="flex items-center border-b border-[#5E2671] pb-1 mb-8">
             <img
-              src="/images/lp/maxlp/profile.png"
+              src="/images/lp/maxlp/profile-orange.png"
               alt="Profile"
               className="w-[26px] h-[26px] mr-4 object-contain"
             />
@@ -349,8 +349,8 @@ const MaxGoogleMobForm = ({ formatService, isInhouse }) => {
               onClick={handleSubmit}
               disabled={isSubmitting || !isFormValid()}
               className={`${isSubmitting || !isFormValid()
-                ? 'bg-gray-400 cursor-not-allowed'
-                : 'bg-[#E8772E] hover:bg-[#d06a28]'
+                ? 'bg-secondary cursor-not-allowed opacity-70'
+                : 'bg-secondary hover:bg-[#d06a28]'
                 } text-white font-semibold py-2 w-full rounded-full flex flex-col items-center justify-center transition-colors duration-200`}
             >
               {isSubmitting ? (

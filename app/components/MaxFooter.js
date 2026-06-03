@@ -17,19 +17,19 @@ const MaxFooter = () => {
     <div className="space-y-4">
       <h2 className="text-2xl font-bold text-[#1E4A6E] mb-4">Terms & Conditions</h2>
       <div className="space-y-3 text-gray-700">
-        <p>Welcome to OASIS FERTILITY. These terms and conditions outline the rules and regulations for the use of our services.</p>
+        <p>Welcome to Oasis Fertility + Genome. These terms and conditions outline the rules and regulations for the use of our services.</p>
         
         <h3 className="font-semibold text-lg">1. Acceptance of Terms</h3>
         <p>By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.</p>
         
         <h3 className="font-semibold text-lg">2. Services</h3>
-        <p>OASIS FERTILITY provides fertility treatment and related medical services. All treatments are subject to medical evaluation and approval.</p>
+        <p>Oasis Fertility + Genome provides fertility treatment and related medical services. All treatments are subject to medical evaluation and approval.</p>
         
         <h3 className="font-semibold text-lg">3. Patient Responsibilities</h3>
         <p>Patients are responsible for providing accurate medical history and following prescribed treatment plans.</p>
         
         <h3 className="font-semibold text-lg">4. Limitation of Liability</h3>
-        <p>OASIS FERTILITY shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services.</p>
+        <p>Oasis Fertility + Genome shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services.</p>
         
         <p className="text-sm text-gray-600 mt-6">Last updated: January 2026</p>
       </div>
@@ -40,7 +40,7 @@ const MaxFooter = () => {
     <div className="space-y-4">
       <h2 className="text-2xl font-bold text-[#1E4A6E] mb-4">Privacy Policy</h2>
       <div className="space-y-3 text-gray-700">
-        <p>At OASIS FERTILITY, we are committed to protecting your privacy and ensuring the security of your personal information.</p>
+        <p>At Oasis Fertility + Genome, we are committed to protecting your privacy and ensuring the security of your personal information.</p>
         
         <h3 className="font-semibold text-lg">1. Information We Collect</h3>
         <p>We collect personal and medical information necessary to provide fertility treatment services, including contact details, medical history, and treatment records.</p>
@@ -65,7 +65,7 @@ const MaxFooter = () => {
   return (
     <>
       <div className=' py-4 text-sm text-black flex flex-col items-center gap-2 mb-16 md:mb-0'>
-        <p className=''>Copyright © 2026, OASIS FERTILITY.</p>
+        <p className=''>Copyright © 2026, Oasis Fertility + Genome.</p>
         <div className='text-[#1E4A6E]'>
           <button 
             onClick={() => openModal('terms')}

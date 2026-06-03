@@ -14,93 +14,93 @@ const ReviewsSection = ({ hideEbook = false }) => {
         IVF: [
             {
                 id: 1,
-                rating: 4.5,
-                date: "May 25 : 10AM",
-                title: "Supportive throughout the journey",
-                content: "I had so many doubts before starting IVF, but the doctor at Oasis Fertility patiently explained every step. Thanks for the support throughout my IVF journey.",
-                author: "Bhavana Karthik",
-                clientId: "OASIS0072311"
+                rating: 5,
+                date: "a year ago",
+                title: "Immense care and wonderful treatment",
+                content: "Since 2020 I along with my wife Mousumi Ray got attached with Genome Fertility Centre. My wife was under the treatment of Dr Sujoy Dasgupta sir, and with his immense care and wonderful treatment, we had a great experience.",
+                author: "Satyajit Ray",
+                clientId: "GEN0072311"
             },
             {
                 id: 2,
                 rating: 5,
-                date: "May 25 : 10:30AM",
-                title: "Gentle and reassuring staff",
-                content: "IVF injections were scary at first, but the nurses at Oasis Fertility were so gentle and reassuring. I felt confident after the doctor and team explained me about the process and every step.",
-                author: "Divya Menon",
-                clientId: "OASIS0072312"
+                date: "a year ago",
+                title: "Exceptional care and expertise",
+                content: "We had an incredible experience at Genome Kolkata, thanks to Dr. Sohini Munshi's exceptional care and expertise. Despite the initial complications, she handled our situation with utmost efficiency and compassion.",
+                author: "J.Ghosh",
+                clientId: "GEN0072312"
             },
             {
                 id: 3,
                 rating: 5,
-                date: "May 25 : 11AM",
-                title: "Very smooth IVF experience",
-                content: "My IVF at Oasis was very smooth. I appreciate how the doctors and staff at Oasis Fertility made it a really comfortable experience.",
-                author: "Meenakshi Sreenivas",
-                clientId: "OASIS0072313"
+                date: "a year ago",
+                title: "One of the best experiences",
+                content: "Had such a great experience here! Everyone was super friendly and made me feel really welcome from the start. The staffs and the doctor are really awesome — they were always helpful and made sure I was comfortable.",
+                author: "Dhana chandra",
+                clientId: "GEN0072313"
             },
             {
                 id: 4,
-                rating: 4.5,
-                date: "May 25 : 11:30AM",
-                title: "Updated lab and caring team",
-                content: "During IVF, the embryo development stage made me anxious if the lab standards would be good or what if they get mixed. But at Oasis they have advanced labs and the team kept us updated. It meant a lot.",
-                author: "Vidya Rajasekar",
-                clientId: "OASIS0072314"
+                rating: 5,
+                date: "11 months ago",
+                title: "Best Infertility centre in Kolkata",
+                content: "Genome is best Infertility centre among Kolkata. Dr Sohini Munsi is a good doctor. All staff of Genome is very Helpfull. We are thankful to Genome for Our Success.",
+                author: "Rachana Bera",
+                clientId: "GEN0072314"
             },
             {
                 id: 5,
                 rating: 5,
-                date: "May 25 : 12PM",
-                title: "Blessed with twins!",
-                content: "Thanks to the experienced team at Oasis Fertility, my IVF treatment went perfectly. We are so happy whenever we see our kids. We have been blessed with twins. Thanks again Oasis Fertility for everything. I recommend Oasis to everyone who wants to have kids.",
-                author: "Savitha Elango",
-                clientId: "OASIS0072315"
+                date: "a year ago",
+                title: "Exclusive service and affordable",
+                content: "We are grateful for Genome the fertility (Kolkata) to provide exclusive service in our pregnancy journey. Dr. Sujay Dasgupta Sir is like God to us and other supportive staffs are very nice. Genome provided affordable price to help us.",
+                author: "Biplab Paul",
+                clientId: "GEN0072315"
             },
             {
                 id: 6,
                 rating: 5,
-                date: "May 25 : 12:30PM",
-                title: "Counselling and care helped us",
-                content: "The toughest part of IVF was the two-week wait after embryo transfer. Oasis Fertility's counselling helped us stay calm and positive and we are so happy that our test results came positive. We are very happy and can't wait to hold our baby. Thanks to Oasis.",
-                author: "Sayali Deshmukh",
-                clientId: "OASIS0072316"
+                date: "2 years ago",
+                title: "Blessed with a baby girl",
+                content: "Thanks to Genome and Dr. Sujoy Dasgupta as we have been blessed with a baby girl. The staff at Genome were very professional and helped us to a great extent. Extremely grateful for the service.",
+                author: "Shatarupa Bhattacharya",
+                clientId: "GEN0072316"
             },
             {
                 id: 7,
                 rating: 5,
-                date: "May 25 : 1PM",
-                title: "Dream of baby came true",
-                content: "Thank you, Oasis Fertility, for making our dream of having a baby come true. We had miscarriages previously, and thought we might never have kids. But the doctors at Oasis changed it. IVF at Oasis is safe.",
-                author: "Pallavi Jadhav",
-                clientId: "OASIS0072317"
+                date: "3 years ago",
+                title: "Amazing and compassionate process",
+                content: "My sister was treated by Dr. Sujoy Dasgupta at Genome and he was really amazing. He helped her get pregnant after years of trying, and he was really kind and compassionate throughout the process. Highly recommend him.",
+                author: "Sreya Das",
+                clientId: "GEN0072317"
             },
             {
                 id: 8,
-                rating: 4.5,
-                date: "May 25 : 1:30PM",
-                title: "Grateful after failed IVF cycles",
-                content: "I had 2 failed IVF cycles elsewhere and I was confused about trying again. But after meeting with the doctor at Oasis Fertility it gave me and my husband a hope, and this time IVF worked. Really grateful and thankful to Oasis team.",
-                author: "Ipsita Panda",
-                clientId: "OASIS0072318"
+                rating: 5,
+                date: "a year ago",
+                title: "Helpful counselor and staff",
+                content: "Excellent Service. After 2 months we started our treatment under doctor Sabnam Parvin at Kolkata. Counselor and Other staff is very helpful and the journey was smooth.",
+                author: "Babu Malik",
+                clientId: "GEN0072318"
             },
             {
                 id: 9,
                 rating: 5,
-                date: "May 25 : 2PM",
-                title: "Positive reviews led us here",
-                content: "We chose Oasis for IVF after hearing positive reviews, and we're glad we did. From start to finish, they were exceptional.",
-                author: "Jinal Patel",
-                clientId: "OASIS0072319"
+                date: "2 years ago",
+                title: "Incredible experience and guidance",
+                content: "My experience with Genome centre is incredible. The staff is very friendly, my query regarding the treatment was well attended. Today we are blessed with beautiful baby girls with the proper guidance from Dr. Prajnanika Gurung.",
+                author: "srijana thapa",
+                clientId: "GEN0072319"
             },
             {
                 id: 10,
-                rating: 4.5,
-                date: "May 25 : 2:30PM",
-                title: "Smooth journey and expert team",
-                content: "IVF is an emotional journey, but Oasis Fertility made it smoother with their expert team and constant care. Highly recommended!",
-                author: "Chaitra Nagesh",
-                clientId: "OASIS0072320"
+                rating: 5,
+                date: "3 years ago",
+                title: "Trusted destination for couples",
+                content: "Genome is truly a trusted destination for childless married couples. Outstanding patient centric approach & absolutely transparent, ethical & rational treatment protocol. We are really touched with their behaviour.",
+                author: "Tripti Roychowdhury",
+                clientId: "GEN0072320"
             },
         ],
 
@@ -108,92 +108,92 @@ const ReviewsSection = ({ hideEbook = false }) => {
             {
                 id: 1,
                 rating: 5,
-                date: "May 24 : 10AM",
-                title: "Smooth IVM experience with PCOS",
-                content: "I have PCOS and I was nervous about IVM treatment, but doctor and the team at Oasis Fertility made me feel so comfortable. From the initial consultation to egg collection, everything was so smooth. Thank you Oasis.",
-                author: "Ananya Sharma",
-                clientId: "OASIS0013472"
+                date: "2 years ago",
+                title: "Professional and helpful team",
+                content: "Thanks to Genome we have been blessed with a child. We have been trying to conceive for some time. Doctors, support staff at Genome all have been very professional and helped us to a great extent.",
+                author: "Amit Pal",
+                clientId: "GEN0013472"
             },
             {
                 id: 2,
-                rating: 4.5,
-                date: "May 24 : 10:30AM",
-                title: "Grateful for guidance and support",
-                content: "We chose IVM due to hormonal sensitivity. The doctor explained every step clearly. The nurses were very helpful and supporting. We are now pregnant and can't wait to hold our baby. We are always grateful to Oasis.",
-                author: "Sneha Rao",
-                clientId: "OASIS0015293"
+                rating: 5,
+                date: "4 years ago",
+                title: "Comforting experience",
+                content: "My experience at Genome was quite comforting. The staff and the doctors were helpful and ensured proper care of me. They made my dreams of expanding my family come true.",
+                author: "DEBOJYOTI ROYCHOWDHURY",
+                clientId: "GEN0015293"
             },
             {
                 id: 3,
-                rating: 4.5,
-                date: "May 24 : 11AM",
-                title: "Referred and satisfied with treatment",
-                content: "A friend of ours suggested we try Oasis. At first we were very tensed and were not really sure. But our journey at Oasis was smooth. Oasis staff is super kind and skilled.",
-                author: "Priya Nair",
-                clientId: "OASIS0019814"
+                rating: 5,
+                date: "3 years ago",
+                title: "Approachable and informed",
+                content: "The assistance that I received from Genome The Fertility Centre is incredible. Dr. Sujoy Dasgupta and the staff were approachable and ensured that I am properly informed about my problem and treatment.",
+                author: "Shreya Damani",
+                clientId: "GEN0019814"
             },
             {
                 id: 4,
                 rating: 5,
-                date: "May 24 : 11:30AM",
-                title: "Effective for PCOS",
-                content: "IVM worked well for me as I had PCOS. I recommend it to all women who are suffering with PCOS. The low medication and very less injections made the entire process easy and painless. Doctors at Oasis guided me so well they explained every detail.",
-                author: "Meenakshi Pillai",
-                clientId: "OASIS0017538"
+                date: "3 years ago",
+                title: "Constant support through IVF",
+                content: "We are recently blessed with a healthy baby boy and this has been possible for the constant support and IVF treatment by Genome. Highly recommended for fertility care.",
+                author: "Milon Dutta",
+                clientId: "GEN0017538"
             },
             {
                 id: 5,
                 rating: 5,
-                date: "May 24 : 12PM",
-                title: "Treated like family",
-                content: "From Day 1, Oasis staff treated us like family, Doctor and counselor support was amazing. We're so thankful for their constant support and encouragement.",
-                author: "Sunita Joshi",
-                clientId: "OASIS0016381"
+                date: "3 years ago",
+                title: "God sent for me",
+                content: "Genome was a god sent for me. I was 41 and wanted to be a mother desperately. The folks at Genome were kind, skilled and so supportive - specially Dr. Gurung.",
+                author: "Rhia Keridwen",
+                clientId: "GEN0016381"
             },
             {
                 id: 6,
-                rating: 4.5,
-                date: "May 24 : 12:30PM",
-                title: "IVM was the perfect alternative",
-                content: "I was scared of injections, and IVM was the perfect alternative. The entire process felt so easy thanks to the doctor's guidance and support. We are happy parents to a girl baby.",
-                author: "Anandhi Venkatesh",
-                clientId: "OASIS0010945"
+                rating: 5,
+                date: "3 years ago",
+                title: "High quality patient care",
+                content: "My elder sister consulted with Dr. Sabnam Parvin, reproductive medicine specialist. Doctor clears every query of her and treats her very well. Well behaviour of all staffs and doctors.",
+                author: "Paramita Bhattacharjee",
+                clientId: "GEN0010945"
             },
             {
                 id: 7,
                 rating: 5,
-                date: "May 24 : 1PM",
-                title: "Made a big difference",
-                content: "I never thought I could go through fertility treatment, but IVM at Oasis was so manageable. The counseling before and after each step made a big difference.",
-                author: "Anjali Reddy",
-                clientId: "OASIS0014277"
+                date: "4 years ago",
+                title: "Talented and patient-friendly doctor",
+                content: "Thanks to Genome for their best services. I was Dr Sujoy Dasgupta's patient, he is a very talented, patient friendly doctor. He is the best in his field.",
+                author: "Avijit Debnath",
+                clientId: "GEN0014277"
             },
             {
                 id: 8,
                 rating: 5,
-                date: "May 24 : 1:30PM",
-                title: "Drug Free IVF worked",
-                content: "I have PCOD and though IVF would be the only way I could pregnant but Drug Free IVF was something we didn't know about before. Oasis doctors made the whole journey stress-free. So grateful! Now we have a beautiful baby boy.",
-                author: "Revathi Ramesh",
-                clientId: "OASIS0017284"
+                date: "3 years ago",
+                title: "Great economical centre",
+                content: "A great economical centre for IVF patient. Specially Dr. Sabnam Parvin, her treatment is outstanding. 24*7 emergency helpline open and also good services.",
+                author: "Pradip Bhattacharya",
+                clientId: "GEN0017284"
             },
             {
                 id: 9,
-                rating: 4.5,
-                date: "May 24 : 2PM",
-                title: "Minimal medication, great care",
-                content: "Minimal medication, great care is what IVM at Oasis is. I was treated with care and so much compassion at Oasis right from Day 1. The follow-up and constant support from the team was very relieving.",
-                author: "Lakshmi Priya Nair",
-                clientId: "OASIS0016152"
+                rating: 5,
+                date: "3 years ago",
+                title: "Efficient and helpful staff",
+                content: "Dr. Prajnanika Gurung treated my aunt very well. She advised tests for more details. Genome is a good hospital, the doctors are very efficient, and also staff is very helpful.",
+                author: "Ashmit Boral",
+                clientId: "GEN0016152"
             },
             {
                 id: 10,
                 rating: 5,
-                date: "May 24 : 2:30PM",
-                title: "Hope and blessings",
-                content: "The staff, the clinic environment, and the process everything at Oasis Fertility was top-notch. IVM gave us hope without IVF as we were tensed about the IVF process. Forever thankful to team Oasis as we are now blessed with a baby boy.",
-                author: "Keerthana Rajan",
-                clientId: "OASIS0012039"
+                date: "a year ago",
+                title: "Grateful for second motherhood",
+                content: "I am very grateful to Genome, Dr. Sujoy Dasgupta sir and the entire team of Genome for giving me the taste of motherhood for the second time. 🙏🙏🙏",
+                author: "Tithi S",
+                clientId: "GEN0012039"
             }
         ]
 
@@ -251,7 +251,7 @@ const ReviewsSection = ({ hideEbook = false }) => {
 
                 <div className='flex flex-col sm:flex-row sm:justify-between'>
                     <div className="text-left mb-8">
-                        <div className="text-[55px] md:text-5xl font-bold text-primary text-opacity-50 md:mb-2">60,000+</div>
+                        <div className="text-[55px] md:text-5xl font-bold text-secondary md:mb-2">70,000+</div>
                         <h2 className="text-[29px] md:text-3xl font-bold text-[#1E4A6E]">
                             Verified Reviews
                         </h2>

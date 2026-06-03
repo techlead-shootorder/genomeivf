@@ -165,10 +165,10 @@ const MaxBookPopupInstant = ({ isOpen, onClose }) => {
                 const currentUrl = window.location.href;
 
                 if (currentUrl.includes('paid')) {
-                    window.open('https://paid.oasisindia.in/ebooks/e-book.pdf', '_blank');
+                   window.open('https://genomeivf.com/upload/fileManager/25-3-25/giving-hope-and-possibility-since-2005.pdf', '_blank');
                 }
                 else {
-                    window.open('https://oasis-staging-links.vercel.app/ebooks/e-book.pdf', '_blank');
+                   window.open('https://genomeivf.com/upload/fileManager/25-3-25/giving-hope-and-possibility-since-2005.pdf', '_blank');
 
                 }
 
