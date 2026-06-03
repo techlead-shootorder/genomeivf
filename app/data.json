@@ -162,12 +162,12 @@
       "influencer_name": "Patient Success Story",
       "videoId": "lRuUO5DG2gw",
       "VideoTitleText": "Journey to Parenthood",
-      "videoImage": "/images/testimonials/success-1.jpg",
+      "videoImage": "https://img.youtube.com/vi/lRuUO5DG2gw/0.jpg",
       "successStory": "From Genome IVF",
       "youTubeVideoUrl": "https://www.youtube.com/shorts/lRuUO5DG2gw",
       "concern": "Infertility Treatment",
       "language": "English",
-      "lang": "Watch in English",
+      "lang": "Watch in Bengali",
       "isSelected": false
     },
     {
@@ -175,12 +175,12 @@
       "influencer_name": "Family Story",
       "videoId": "fTkbsY0MvOE",
       "VideoTitleText": "Blessed with Parenthood",
-      "videoImage": "/images/testimonials/success-2.jpg",
+      "videoImage": "https://img.youtube.com/vi/fTkbsY0MvOE/0.jpg",
       "successStory": "Hope & Success",
       "youTubeVideoUrl": "https://www.youtube.com/shorts/fTkbsY0MvOE",
       "concern": "Fertility Care",
       "language": "English",
-      "lang": "Watch in English",
+      "lang": "Watch in Bengali",
       "isSelected": false
     },
     {
@@ -188,12 +188,12 @@
       "influencer_name": "Happy Parents",
       "videoId": "EO4VFb0bgVk",
       "VideoTitleText": "Dreams Come True",
-      "videoImage": "/images/testimonials/success-3.jpg",
+      "videoImage": "https://img.youtube.com/vi/EO4VFb0bgVk/0.jpg",
       "successStory": "Our IVF Journey",
       "youTubeVideoUrl": "https://www.youtube.com/shorts/EO4VFb0bgVk",
       "concern": "Advanced Treatment",
       "language": "English",
-      "lang": "Watch in English",
+      "lang": "Watch in Bengali",
       "isSelected": false
     },
     {
@@ -201,12 +201,12 @@
       "influencer_name": "Success Story",
       "videoId": "5Eo_AxwJ-Is",
       "VideoTitleText": "Miracle of Life",
-      "videoImage": "/images/testimonials/success-4.jpg",
+      "videoImage": "https://img.youtube.com/vi/5Eo_AxwJ-Is/0.jpg",
       "successStory": "Expert Care & Support",
       "youTubeVideoUrl": "https://www.youtube.com/watch?v=5Eo_AxwJ-Is",
       "concern": "Specialized Treatment",
       "language": "English",
-      "lang": "Watch in English",
+      "lang": "Watch in Bengali",
       "isSelected": false
     },
     {
@@ -214,12 +214,12 @@
       "influencer_name": "Patient Testimonial",
       "videoId": "BsGdAz9cZdg",
       "VideoTitleText": "Our Success at Genome",
-      "videoImage": "/images/testimonials/success-5.jpg",
+      "videoImage": "https://img.youtube.com/vi/BsGdAz9cZdg/0.jpg",
       "successStory": "Professional Guidance",
       "youTubeVideoUrl": "https://www.youtube.com/watch?v=BsGdAz9cZdg",
       "concern": "Fertility Solutions",
       "language": "English",
-      "lang": "Watch in English",
+      "lang": "Watch in Bengali",
       "isSelected": false
     }
   ]
