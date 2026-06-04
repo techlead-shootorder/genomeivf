@@ -1,14 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
 const MaxFertilityMessage = () => {
-  const [playVideo, setPlayVideo] = useState(false);
-
   return (
     <section className="py-8 md:py-16 bg-gradient-to-b from-gray-50 to-gray-50 mb-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          
+
           {/* ================= MOBILE HEADING (ONLY MOBILE) ================= */}
           <div className="block md:hidden">
             <div className="relative pl-5 mb-4">
@@ -27,51 +25,14 @@ const MaxFertilityMessage = () => {
             </p>
           </div>
 
-          {/* ================= LEFT SIDE - VIDEO ================= */}
+          {/* ================= LEFT SIDE - IMAGE ================= */}
           <div className="w-full">
-            <div
-              className="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-black"
-              style={{ paddingBottom: "56.25%" }}
-            >
-              {!playVideo ? (
-                <>
-                  <img
-                    src="https://img.youtube.com/vi/MrNCaJKlMwQ/maxresdefault.jpg"
-                    alt="Oasis Fertility + Genome Video"
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <button
-                      type="button"
-                      onClick={() => setPlayVideo(true)}
-                      className="w-16 h-16 md:w-20 md:h-20 
-                        bg-[#7A3C7A]/80 rounded-full 
-                        flex items-center justify-center
-                        shadow-2xl cursor-pointer
-                        hover:scale-105 transition-transform duration-200"
-                      aria-label="Play video"
-                    >
-                      <svg
-                        className="w-8 h-8 md:w-10 md:h-10 text-white ml-1"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </button>
-                  </div>
-                </>
-              ) : (
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube.com/embed/MrNCaJKlMwQ?autoplay=1&rel=0&modestbranding=1&showinfo=0"
-                  title="Oasis Fertility + Genome Message"
-                  frameBorder="0"
-                  allow="autoplay; encrypted-media; picture-in-picture"
-                  allowFullScreen
-                />
-              )}
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/images/Oasis Genome.png"
+                alt="Oasis Fertility + Genome IVF"
+                className="w-full h-auto object-cover rounded-2xl"
+              />
             </div>
           </div>
 
