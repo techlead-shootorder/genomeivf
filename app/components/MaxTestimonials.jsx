@@ -48,7 +48,7 @@ const MaxTestimonials = () => {
                 <div className="text-left sm:text-center">
                     <div className='mb-4'>
                         <div className='flex flex-col sm:flex-row sm:items-center sm:gap-8'>
-                            <div className="text-[55px] md:text-[55px] font-bold mt-3 text-secondary">70,000+</div>
+                            <div className="text-[55px] md:text-[55px] font-bold mt-3 text-primary text-opacity-50">70,000+</div>
                             <div className="text-[29px] font-bold mb-2 text-[#2B5F8A]">
                                 Families <span className="font-normal">We&apos;ve Helped Create</span>
                                 <div className="text-[14px] opacity-90 text-[#2B5F8A] text-left">Many couples experience positive outcomes in their early treatment cycles</div>

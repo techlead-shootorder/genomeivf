@@ -21,11 +21,9 @@ export class LeadController {
         });
     }
 
+    // Pabbly removed - leads now go to Salesforce via /api/lead
     pabbly(leadRequest) {
-        return fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY0MDYzZjA0MzQ1MjY4NTUzZDUxM2Ei_pc", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(leadRequest),
-        })
+        // No-op: Salesforce is the primary CRM
+        return Promise.resolve();
     }
 }
