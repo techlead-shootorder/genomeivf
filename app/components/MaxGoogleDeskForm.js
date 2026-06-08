@@ -272,7 +272,7 @@ const MaxGoogleDeskForm = ({ formatService, isInhouse }) => {
             <img
               src="/images/lp/maxlp/profile-orange.png"
               alt="Profile"
-              className="w-[32px] h-[32px] mr-4 object-contain"
+              className="w-[20px] h-[20px] mr-4 object-contain"
             />
             <div className="w-full">
               <input
@@ -291,7 +291,7 @@ const MaxGoogleDeskForm = ({ formatService, isInhouse }) => {
             <img
               src="/images/lp/maxlp/flag.png"
               alt="India Flag"
-              className="w-[32px] h-[32px] mr-2 object-contain"
+              className="w-[20px] h-[20px] mr-2 object-contain"
             />
             <span className="text-primary font-bold text-[14px] mr-2">+91</span>
             <div className="w-[1px] mr-2 h-6 bg-primary"></div>

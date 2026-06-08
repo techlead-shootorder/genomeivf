@@ -37,7 +37,8 @@ export async function POST(request) {
 
     const auth = Buffer.from(`${EXOTEL_API_KEY}:${EXOTEL_API_TOKEN}`).toString('base64');
 
-    const smsMessage = `Your OTP is ${otp_val}. Please do not share this with anyone. - Oasis Fertility`;
+    
+    const smsMessage = `OTP for enquiry with Oasis Fertility is ${otp_val} and valid for 2 minutes. Do not share this OTP with anyone for security reasons.`;
 
     const exotelResponse = await fetch(exotelUrl, {
       method: 'POST',
