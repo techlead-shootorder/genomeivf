@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useFormValidation } from './hooks/useFormValidation';
 import { YourController } from './YourController';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 const ToastComponent = {
   success: (message) => {
@@ -35,16 +34,14 @@ export default function RegistrationForm({
     error: '',
     otpSent: false,
     otpVerified: false,
-    recaptchaVerified: false,
+    recaptchaVerified: true, // Disabled for development
     showOtpInput: false,
-    showRecaptcha: false,
+    showRecaptcha: false, // Disabled for development
   });
 
   const [ageOptions, setAgeOptions] = useState([]);
   const [randomOtp, setRandomOtp] = useState(null);
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
   const inputRefs = useRef([]);
-  const recaptchaRef = useRef(null);
 
   const { isFormValid } = useFormValidation(formData, formState);
 
@@ -212,10 +209,10 @@ export default function RegistrationForm({
       setFormState(prev => ({
         ...prev,
         otpVerified: true,
-        showRecaptcha: true,
+        showRecaptcha: false, // Disabled - skip reCAPTCHA
         error: '',
       }));
-      ToastComponent.success('OTP verified successfully!');
+      ToastComponent.success('OTP verified successfully! Select "Get a Call Back" to submit.');
     } else {
       setFormState(prev => ({
         ...prev,
@@ -225,21 +222,7 @@ export default function RegistrationForm({
     }
   };
 
-  const handleRecaptchaSuccess = (token) => {
-    setRecaptchaToken(token);
-    setFormState(prev => ({
-      ...prev,
-      recaptchaVerified: true,
-    }));
-  };
 
-  const handleRecaptchaExpired = () => {
-    setRecaptchaToken(null);
-    setFormState(prev => ({
-      ...prev,
-      recaptchaVerified: false,
-    }));
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -462,18 +445,7 @@ export default function RegistrationForm({
             </div>
           )}
 
-          {/* reCAPTCHA */}
-          {formState.showRecaptcha && (
-            <div className="mb-3 p-2 border border-[#5E2671] rounded bg-transparent">
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}
-                onChange={handleRecaptchaSuccess}
-                onExpired={handleRecaptchaExpired}
-                theme="light"
-              />
-            </div>
-          )}
+          {/* reCAPTCHA disabled for development */}
 
           {/* Consent */}
           <div className="flex items-center mb-3">

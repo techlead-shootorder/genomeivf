@@ -4,15 +4,15 @@ export const useFormValidation = (formData, formState) => {
   const [isValid, setIsValid] = useState(false);
 
   useEffect(() => {
+    // recaptchaVerified is not required since reCAPTCHA is disabled
     const valid =
       formData.firstName?.trim() !== '' &&
       formData.firstName?.trim().length >= 3 &&
-      formData.mobileNo?.length === 13 &&
+      formData.mobileNo?.length === 10 && // 10 digits, no +91 prefix stored
       formData.gender !== '' &&
       formData.age !== '' &&
       formData.consent === true &&
-      formState.otpVerified === true &&
-      formState.recaptchaVerified === true;
+      formState.otpVerified === true;
 
     setIsValid(valid);
   }, [formData, formState]);
@@ -35,7 +35,7 @@ export const useFormValidation = (formData, formState) => {
   const getFieldError = (fieldName) => {
     const errors = {
       firstName: formData.firstName?.trim().length < 3 ? 'Name must be at least 3 characters' : '',
-      mobileNo: formData.mobileNo?.length < 13 ? 'Enter valid 10-digit number' : '',
+      mobileNo: formData.mobileNo?.length < 10 ? 'Enter valid 10-digit number' : '',
       gender: !formData.gender ? 'Please select gender' : '',
       age: !formData.age ? 'Please select age' : '',
     };
