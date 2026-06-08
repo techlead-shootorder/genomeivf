@@ -227,15 +227,27 @@ const HeroV2 = ({ service, isMeta, isfemaleAssessment, customForm = null }) => {
           </div>
         </div>
 
-        <div className="relative pt-24 pb-14 md:pt-14 md:pb-0  flex items-end justify-between h-full lg:flex">
-          <InvisibleArticle />
-          <div className="hidden md:block md:mr-[0px] lg:mr-[50px] xl:mr-[100px] relative z-50">
-            {customForm ? customForm : <LeadFormWrapper isMeta={isMeta} formatService={formatService} />}
-          </div>
+        <div className={`relative ${customForm ? 'pt-0 pb-0 md:pt-0 md:pb-0 flex items-center justify-end h-full lg:flex' : 'pt-24 pb-14 md:pt-14 md:pb-0 flex items-end justify-between h-full lg:flex'}`}>
+          {!customForm && <InvisibleArticle />}
+          {!customForm && (
+            <div className="hidden md:block md:mr-[0px] lg:mr-[50px] xl:mr-[100px] relative z-50">
+              <LeadFormWrapper isMeta={isMeta} formatService={formatService} />
+            </div>
+          )}
+          {customForm && (
+            <div className="hidden md:block md:mr-[0px] lg:mr-[50px] xl:mr-[100px] relative z-50">
+              {customForm}
+            </div>
+          )}
         </div>
       </section>
 
-      {customForm ? customForm : <MobileLeadForm isMeta={isMeta} formatService={formatService} />}
+      {!customForm && <MobileLeadForm isMeta={isMeta} formatService={formatService} />}
+      {customForm && (
+        <div className="md:hidden px-4 py-6 flex justify-center">
+          {customForm}
+        </div>
+      )}
     </Suspense>
   );
 };

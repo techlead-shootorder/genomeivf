@@ -277,7 +277,7 @@ const MaxGoogleMobForm = ({ formatService, isInhouse }) => {
             <img
               src="/images/lp/maxlp/profile-orange.png"
               alt="Profile"
-              className="w-[26px] h-[26px] mr-4 object-contain"
+              className="w-[20px] h-[20px] mr-4 object-contain"
             />
             <input
               type="text"

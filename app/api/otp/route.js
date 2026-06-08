@@ -52,7 +52,19 @@ export async function POST(request) {
       }).toString(),
     });
 
-    const exotelData = await exotelResponse.json();
+    const responseText = await exotelResponse.text();
+    console.log(`[OTP] Exotel Raw Response:`, responseText.substring(0, 200));
+
+    let exotelData;
+    const contentType = exotelResponse.headers.get('content-type');
+
+    // Handle both JSON and XML responses
+    if (contentType?.includes('application/json')) {
+      exotelData = JSON.parse(responseText);
+    } else {
+      // Parse XML response
+      exotelData = { rawResponse: responseText };
+    }
 
     console.log(`[OTP] Exotel Response:`, exotelData);
 
@@ -64,10 +76,23 @@ export async function POST(request) {
       );
     }
 
+    // Check for success in XML response
+    // Exotel returns Status: queued, sent, or failed
+    const successStatuses = ['queued', 'sent', 'delivered'];
+    const hasSuccessStatus = successStatuses.some(status => responseText.includes(`<Status>${status}</Status>`));
+
+    if (!hasSuccessStatus) {
+      console.error(`[OTP Error] Exotel returned error status:`, responseText);
+      return NextResponse.json(
+        { error: 'Failed to send OTP', details: responseText },
+        { status: 400 }
+      );
+    }
+
     console.log(`[OTP] OTP sent successfully to ${mobile}`);
 
     return NextResponse.json(
-      { success: true, message: 'OTP sent successfully', requestId: exotelData?.SmsMessage?.Sid },
+      { success: true, message: 'OTP sent successfully', requestId: exotelData?.Sid },
       { status: 200 }
     );
   } catch (error) {

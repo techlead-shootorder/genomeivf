@@ -244,10 +244,10 @@ const MaxGoogleDeskForm = ({ formatService, isInhouse }) => {
   };
 
   return (
-    <div className={`hidden md:block relative max-w-sm mx-auto rounded-[20px] bg-blue-100 z-10 ${isInhouse ? 'mt-[60px]' : 'mt-10'}`}>
+    <div className={`hidden md:block relative max-w-sm mx-auto bg-blue-100 z-10 ${isInhouse ? 'mt-[60px]' : 'mt-10'}`}>
       {/* Header */}
       <div className="flex justify-center -mt-6">
-        <div className="bg-[url('/images/lp/maxlp/orange-bg.png')] bg-cover bg-no-repeat bg-center h-[44px] w-full max-w-[240px] flex flex-col items-center justify-center rounded-t-[20px]">
+        <div className="bg-[url('/images/lp/maxlp/orange-bg.png')] bg-cover bg-no-repeat bg-center h-[44px] w-full max-w-[240px] flex flex-col items-center justify-center">
           <div className="text-center">
             <h1 className="text-white text-[16px] font-bold leading-tight">
               Free Consultation
