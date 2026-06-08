@@ -2,6 +2,7 @@
 import React, { memo, Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import MetaHeader from '@/app/components/MetaHeader';
+import HeroMetalp from '@/app/components/HeroMetalp';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 
 // Static Data
@@ -30,18 +31,10 @@ const Page = memo(() => {
     return (
         <main>
             <MetaHeader isMeta={isMeta}/>
-
-            {/* Hero Section with Registration Form */}
-            <section className="bg-[#fde9f2] py-8 md:py-16">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="max-w-md mx-auto">
-                        <RegistrationForm
-                            center={filteredCity}
-                            service="Fertility"
-                        />
-                    </div>
-                </div>
-            </section>
+            <HeroMetalp
+                isMeta={isMeta}
+                customForm={<RegistrationForm center={filteredCity} service="Fertility" />}
+            />
 
             <Suspense fallback={<ComponentLoader />}>
                 <DynamicComponents.MaxTestimonials />
