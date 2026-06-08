@@ -1,5 +1,21 @@
 import { NextResponse } from "next/server";
 
+// Verify reCAPTCHA token
+async function verifyRecaptcha(token) {
+  const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      secret: process.env.NEXT_GOOGLE_RECAPTCHA_SECRET_KEY,
+      response: token,
+    }),
+  });
+
+  const data = await response.json();
+  console.log('[reCAPTCHA] Verification result:', data);
+  return data.success;
+}
+
 // Salesforce OAuth2 - get access token using password grant
 async function getSalesforceAccessToken() {
   const params = new URLSearchParams({
@@ -49,6 +65,17 @@ export async function POST(req) {
   try {
     const body = await req.json();
     console.log("Lead form submission received:", body);
+
+    // Verify reCAPTCHA
+    if (body.recaptchaToken) {
+      const isValidRecaptcha = await verifyRecaptcha(body.recaptchaToken);
+      if (!isValidRecaptcha) {
+        return NextResponse.json(
+          { success: false, error: 'reCAPTCHA verification failed. Please try again.' },
+          { status: 400 }
+        );
+      }
+    }
 
     // Get Salesforce access token
     const { access_token, instance_url } = await getSalesforceAccessToken();

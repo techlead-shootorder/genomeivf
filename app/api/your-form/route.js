@@ -1,12 +1,42 @@
 import { NextResponse } from 'next/server';
 
+// Verify reCAPTCHA token
+async function verifyRecaptcha(token) {
+  const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      secret: process.env.NEXT_GOOGLE_RECAPTCHA_SECRET_KEY,
+      response: token,
+    }),
+  });
+
+  const data = await response.json();
+  console.log('[reCAPTCHA] Verification result:', data);
+  return data.success;
+}
+
 export async function POST(request) {
   const startTime = Date.now();
   const requestId = `form_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 
   try {
     const body = await request.json();
-    const { firstName, mobileNo, age, gender, consent } = body;
+    const { firstName, mobileNo, age, gender, consent, recaptchaToken } = body;
+
+    // Verify reCAPTCHA
+    if (recaptchaToken) {
+      const isValidRecaptcha = await verifyRecaptcha(recaptchaToken);
+      if (!isValidRecaptcha) {
+        return NextResponse.json(
+          { error: 'reCAPTCHA verification failed. Please try again.' },
+          { status: 400 }
+        );
+      }
+    }
+
+    console.log(`[${requestId}] Form submission received`);
+    console.log(`[${requestId}] Name: ${firstName}, Mobile: ${mobileNo ? mobileNo.substring(0, 6) + '****' : 'N/A'}`);
 
     console.log(`[${requestId}] Form submission received`);
     console.log(`[${requestId}] Name: ${firstName}, Mobile: ${mobileNo.substring(0, 6)}****`);

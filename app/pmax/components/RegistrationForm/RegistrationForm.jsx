@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useFormValidation } from './hooks/useFormValidation';
 import { YourController } from './YourController';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const ToastComponent = {
   success: (message) => {
@@ -41,7 +42,9 @@ export default function RegistrationForm({
 
   const [ageOptions, setAgeOptions] = useState([]);
   const [randomOtp, setRandomOtp] = useState(null);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
   const inputRefs = useRef([]);
+  const recaptchaRef = useRef(null);
 
   const { isFormValid } = useFormValidation(formData, formState);
 
@@ -222,10 +225,19 @@ export default function RegistrationForm({
     }
   };
 
-  const handleRecaptchaSuccess = () => {
+  const handleRecaptchaSuccess = (token) => {
+    setRecaptchaToken(token);
     setFormState(prev => ({
       ...prev,
       recaptchaVerified: true,
+    }));
+  };
+
+  const handleRecaptchaExpired = () => {
+    setRecaptchaToken(null);
+    setFormState(prev => ({
+      ...prev,
+      recaptchaVerified: false,
     }));
   };
 
@@ -256,6 +268,7 @@ export default function RegistrationForm({
         consent: formData.consent,
         center: center?.center_name || 'India',
         service,
+        recaptchaToken,
         ...utmParams,
       };
 
@@ -452,13 +465,13 @@ export default function RegistrationForm({
           {/* reCAPTCHA */}
           {formState.showRecaptcha && (
             <div className="mb-3 p-2 border border-[#5E2671] rounded bg-transparent">
-              <button
-                type="button"
-                onClick={handleRecaptchaSuccess}
-                className="w-full py-1 bg-primary text-white rounded text-sm font-bold hover:bg-red-600"
-              >
-                ✓ I'm not a robot
-              </button>
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}
+                onChange={handleRecaptchaSuccess}
+                onExpired={handleRecaptchaExpired}
+                theme="light"
+              />
             </div>
           )}
 
