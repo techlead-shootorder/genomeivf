@@ -294,7 +294,7 @@ const MaxGoogleMobForm = ({ formatService, isInhouse }) => {
             <img
               src="/images/lp/maxlp/flag.png"
               alt="India Flag"
-              className="w-[26px] h-[26px] mr-2 object-contain"
+              className="w-[20px] h-[20px] mr-2 object-contain"
             />
             <span className="text-[#333333] text-[16px] mr-2">+91</span>
             <div className="w-[1px] mr-2 h-6 bg-[#333333]"></div>
