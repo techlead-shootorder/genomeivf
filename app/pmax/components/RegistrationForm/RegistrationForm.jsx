@@ -7,11 +7,9 @@ import { YourController } from './YourController';
 const ToastComponent = {
   success: (message) => {
     console.log('✅ Success:', message);
-    alert(message);
   },
   error: (message) => {
     console.error('❌ Error:', message);
-    alert(message);
   },
 };
 
@@ -72,6 +70,12 @@ export default function RegistrationForm({
       localStorage.setItem('utmParams', JSON.stringify(filtered));
     }
   }, []);
+
+  useEffect(() => {
+    if (formState.showOtpInput && inputRefs.current[0]) {
+      inputRefs.current[0].focus();
+    }
+  }, [formState.showOtpInput]);;
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -251,7 +255,6 @@ export default function RegistrationForm({
         consent: formData.consent,
         center: center?.center_name || 'India',
         service,
-        recaptchaToken,
         ...utmParams,
       };
 

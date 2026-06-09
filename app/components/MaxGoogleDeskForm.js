@@ -125,6 +125,7 @@ const MaxGoogleDeskForm = ({ formatService, isInhouse }) => {
   // Form validation function
   const isFormValid = () => {
     const basicFieldsValid = formData.firstName !== "" &&
+      formData.firstName.length >= 3 &&
       formData.mobileNo !== "" &&
       formData.mobileNo.length === 10 &&
       (!isInhouse || formData.selectedClinic !== "") &&
