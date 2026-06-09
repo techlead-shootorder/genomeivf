@@ -223,8 +223,11 @@ const HeroV2 = ({ service, isMeta, isfemaleAssessment, customForm = null }) => {
           </div>
         </div>
 
-        <div className={`relative pt-24 pb-14 ${customForm ? 'md:pt-0 md:pb-0 flex items-center justify-end h-full lg:flex' : 'md:pt-14 md:pb-0 flex items-end justify-between h-full lg:flex'}`}>
-          <InvisibleArticle />
+        <div className={`relative pt-24 pb-14 flex h-full ${customForm ? 'md:pt-0 md:pb-0 items-end md:items-center justify-between md:justify-end lg:flex' : 'md:pt-14 md:pb-0 items-end justify-between lg:flex'}`}>
+          {!customForm && <InvisibleArticle />}
+          {customForm && (
+            <div className="md:hidden w-full" style={{ height: '320px' }}></div>
+          )}
           {!customForm && (
             <div className="hidden md:block md:mr-[0px] lg:mr-[50px] xl:mr-[100px] relative z-50">
               <LeadFormWrapper isMeta={isMeta} formatService={formatService} />
@@ -240,7 +243,7 @@ const HeroV2 = ({ service, isMeta, isfemaleAssessment, customForm = null }) => {
 
       {!customForm && <MobileLeadForm isMeta={isMeta} formatService={formatService} />}
       {customForm && (
-        <div id="leadformlp3" className="md:hidden flex items-center -mt-[60px] w-full relative z-[9]">
+        <div id="leadformlp3" className="md:hidden flex items-center -mt-[60px] w-full relative z-[10]">
           <div className="flex flex-col items-center w-full">
             <div className="w-[90%]">
               {customForm}

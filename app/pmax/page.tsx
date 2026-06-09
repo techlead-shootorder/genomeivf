@@ -24,15 +24,14 @@ const DynamicComponents = {
     MaxAward: dynamic(() => import('@/app/components/MaxAward'), { loading: () => <ComponentLoader /> }),
     MaxFaq: dynamic(() => import('@/app/components/MaxFaq'), { loading: () => <ComponentLoader /> }),
     MaxFooter: dynamic(() => import('@/app/components/MaxFooter'), { loading: () => <MinimalLoader /> }),
-    VideoIndiaStickyButton: dynamic(() => import('@/app/components/VideoIndiaStickyButton'), { loading: () => <MinimalLoader /> }),
 }
 
 const Page = memo(() => {
     return (
         <main>
             <MetaHeader isMeta={isMeta} googel1num={true}/>
-            <HeroMetalp
-                isMeta={isMeta}
+            <HeroMetalp 
+                isMeta={isMeta} 
                 customForm={<RegistrationForm center={filteredCity} service="Fertility" />}
             />
 
@@ -91,5 +90,5 @@ const Page = memo(() => {
     );
 });
 
-Page.displayName = "PmaxPage";
+Page.displayName = "Page";
 export default Page;

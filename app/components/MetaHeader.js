@@ -50,7 +50,7 @@ DesktopHeader.displayName = 'DesktopHeader';
 
 // Mobile Header - Fixed Version
 const MobileHeader = memo(({isMeta, googel1num}) => (
-    <nav className="flex md:hidden fixed w-full top-[0px] z-[9] items-center justify-between bg-gray-100 px-4 py-2">
+    <nav className="flex md:hidden fixed w-full top-[0px] z-[50] items-center justify-between bg-gray-100 px-4 py-2">
         <div className="flex items-center text-white">
             <img
                 src='https://genomeivf.com/images/logo.png'
