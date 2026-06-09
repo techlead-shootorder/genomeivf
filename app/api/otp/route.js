@@ -1,105 +1,157 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
+import { APILogger } from "@/lib/loggingUtil";
 
-// Exotel Configuration
-const EXOTEL_API_KEY = process.env.EXOTEL_API_KEY;
-const EXOTEL_API_TOKEN = process.env.EXOTEL_API_TOKEN;
-const EXOTEL_SUBDOMAIN = 'api.in.exotel.com';
-const EXOTEL_SID = 'oasisindia1m';
-const EXOTEL_SENDER_ID = 'OASIST';
+const otpLogger = new APILogger("otp_requests");
 
 export async function POST(request) {
+  const startTime = Date.now();
+  const requestId = `otp_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
   try {
-    const body = await request.json();
-    const { mobile, otp_val } = body;
+    const userRequestJson = await request.json();
+    const { mobile, otp_val } = userRequestJson;
 
-    console.log(`[OTP] Sending OTP to ${mobile}`);
+    console.log(`[${requestId}] OTP request received for mobile: ${mobile?.substring(0, 4)}****`);
+    console.log(`[${requestId}] Generated 4-digit OTP is: ${otp_val}`);
 
-    // Validate inputs
+    // Input validation
     if (!mobile || !otp_val) {
+      const errorLog = {
+        requestId,
+        mobile: mobile?.substring(0, 4) + "****",
+        status: "VALIDATION_ERROR",
+        errorCode: "MISSING_PARAMS",
+        errorMessage: "Mobile number and OTP value are required",
+        responseTime_ms: Date.now() - startTime,
+      };
+      await otpLogger.log(errorLog);
+
       return NextResponse.json(
-        { error: 'Missing mobile or OTP value' },
+        { error: "Mobile number and OTP value are required" },
         { status: 400 }
       );
     }
 
-    // Remove +91 if present to get 10-digit number
-    const cleanMobile = mobile.replace(/^\+91/, '');
+    const API_KEY = "b8fce1110e804fed22978980a94ed5fc1b956d2dc1560efa";
+    const API_TOKEN = "8ff014908bc520818e0406441fddab7b70ae1428196997a2";
+    const SUBDOMAIN = "api.in.exotel.com";
+    const SID = "oasisindia1m";
+    const API_URL = `https://${SUBDOMAIN}/v1/Accounts/${SID}/Sms/send`;
 
-    if (cleanMobile.length !== 10) {
-      return NextResponse.json(
-        { error: 'Invalid mobile number' },
-        { status: 400 }
-      );
-    }
+    const senderId = "OASIST";
+    const message = `OTP for enquiry with Oasis Fertility is ${otp_val} and valid for 2 minutes. Do not share this OTP with anyone for security reasons.`;
 
-    // Send OTP via Exotel
-    const exotelUrl = `https://${EXOTEL_SUBDOMAIN}/v1/Accounts/${EXOTEL_SID}/Sms/send`;
-
-    const auth = Buffer.from(`${EXOTEL_API_KEY}:${EXOTEL_API_TOKEN}`).toString('base64');
-
-    
-    const smsMessage = `OTP for enquiry with Oasis Fertility is ${otp_val} and valid for 2 minutes. Do not share this OTP with anyone for security reasons.`;
-
-    const exotelResponse = await fetch(exotelUrl, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Basic ${auth}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams({
-        From: EXOTEL_SENDER_ID,
-        To: cleanMobile,
-        Body: smsMessage,
-      }).toString(),
+    // Data payload for the API request
+    const params = new URLSearchParams({
+      From: senderId,
+      To: mobile,
+      Body: message,
     });
 
-    const responseText = await exotelResponse.text();
-    console.log(`[OTP] Exotel Raw Response:`, responseText.substring(0, 200));
+    // Encode API_KEY and API_TOKEN for Basic Auth
+    const authHeader = `Basic ${Buffer.from(`${API_KEY}:${API_TOKEN}`).toString(
+      "base64"
+    )}`;
 
-    let exotelData;
-    const contentType = exotelResponse.headers.get('content-type');
+    console.log(`[${requestId}] Sending OTP request to Exotel`);
+    const exotelStartTime = Date.now();
 
-    // Handle both JSON and XML responses
-    if (contentType?.includes('application/json')) {
-      exotelData = JSON.parse(responseText);
+    // Use fetch to send OTP via Exotel API
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Authorization: authHeader,
+      },
+      body: params.toString(),
+    });
+
+    const exotelResponseTime = Date.now() - exotelStartTime;
+    const data = await response.text();
+
+    console.log(`[${requestId}] Exotel response status: ${response.status}, time: ${exotelResponseTime}ms`);
+
+    if (response.ok) {
+      if (!data.includes("Error") && !data.includes("error") && !data.includes("failed")) {
+        // Success
+        const successLog = {
+          requestId,
+          mobile: mobile.substring(0, 4) + "****",
+          status: "SUCCESS",
+          exotelStatus: response.status,
+          exotelResponseTime_ms: exotelResponseTime,
+          totalResponseTime_ms: Date.now() - startTime,
+          hasErrorInResponse: false,
+        };
+        await otpLogger.log(successLog);
+
+        console.log(`[${requestId}] ✅ OTP sent successfully`);
+
+        return NextResponse.json(
+          { success: true, response: data },
+          { status: 200 }
+        );
+      } else {
+        // Error in XML response
+        const errorLog = {
+          requestId,
+          mobile: mobile.substring(0, 4) + "****",
+          status: "EXOTEL_ERROR",
+          errorCode: "ERROR_IN_RESPONSE",
+          exotelStatus: response.status,
+          exotelResponseTime_ms: exotelResponseTime,
+          exotelResponse: data.substring(0, 200),
+          totalResponseTime_ms: Date.now() - startTime,
+          hasErrorInResponse: true,
+        };
+        await otpLogger.log(errorLog);
+
+        console.error(`[${requestId}] ❌ Error response from Exotel:`, data.substring(0, 100));
+
+        return NextResponse.json(
+          { error: "Failed to send OTP", details: data },
+          { status: 400 }
+        );
+      }
     } else {
-      // Parse XML response
-      exotelData = { rawResponse: responseText };
-    }
+      // HTTP error from Exotel
+      const errorLog = {
+        requestId,
+        mobile: mobile.substring(0, 4) + "****",
+        status: "HTTP_ERROR",
+        exotelStatus: response.status,
+        errorCode: `HTTP_${response.status}`,
+        exotelResponseTime_ms: exotelResponseTime,
+        exotelResponse: data.substring(0, 200),
+        totalResponseTime_ms: Date.now() - startTime,
+      };
+      await otpLogger.log(errorLog);
 
-    console.log(`[OTP] Exotel Response:`, exotelData);
+      console.error(`[${requestId}] ❌ HTTP error from Exotel: ${response.status}`);
 
-    if (!exotelResponse.ok) {
-      console.error(`[OTP Error] Exotel API Error:`, exotelData);
       return NextResponse.json(
-        { error: 'Failed to send OTP', details: exotelData },
-        { status: exotelResponse.status }
+        { error: "Failed to send OTP", details: data },
+        { status: 500 }
       );
     }
-
-    // Check for success in XML response
-    // Exotel returns Status: queued, sent, or failed
-    const successStatuses = ['queued', 'sent', 'delivered'];
-    const hasSuccessStatus = successStatuses.some(status => responseText.includes(`<Status>${status}</Status>`));
-
-    if (!hasSuccessStatus) {
-      console.error(`[OTP Error] Exotel returned error status:`, responseText);
-      return NextResponse.json(
-        { error: 'Failed to send OTP', details: responseText },
-        { status: 400 }
-      );
-    }
-
-    console.log(`[OTP] OTP sent successfully to ${mobile}`);
-
-    return NextResponse.json(
-      { success: true, message: 'OTP sent successfully', requestId: exotelData?.Sid },
-      { status: 200 }
-    );
   } catch (error) {
-    console.error('[OTP Error]:', error);
+    const errorLog = {
+      requestId,
+      status: "EXCEPTION",
+      errorCode: "OTP_SEND_EXCEPTION",
+      errorMessage: error.message,
+      errorStack: error.stack?.substring(0, 200),
+      totalResponseTime_ms: Date.now() - startTime,
+    };
+    await otpLogger.log(errorLog);
+
+    console.error(`[${requestId}] 💥 Exception sending OTP:`, error.message);
+
     return NextResponse.json(
-      { error: 'Failed to send OTP', details: error.message },
+      {
+        error: "An error occurred while sending the OTP",
+        details: error.message,
+      },
       { status: 500 }
     );
   }

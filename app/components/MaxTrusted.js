@@ -9,15 +9,6 @@ import { UAParser } from 'ua-parser-js';
 
 // Video Reel Skeleton Component Comment
 const VideoReelSkeleton = () => {
-  const getSkeletonCount = () => {
-    if (typeof window !== 'undefined') {
-      if (window.innerWidth >= 1024) return 4;
-      if (window.innerWidth >= 768) return 3;
-      return 2;
-    }
-    return 4;
-  };
-
 //   Below is video skeleton
 
   return (
@@ -27,8 +18,8 @@ const VideoReelSkeleton = () => {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
-        {[...Array(getSkeletonCount())].map((_, index) => (
-          <div key={index} className="relative rounded-xl overflow-hidden">
+        {[...Array(4)].map((_, index) => (
+          <div key={index} className={`relative rounded-xl overflow-hidden ${index === 2 ? 'hidden md:block' : ''} ${index === 3 ? 'hidden lg:block' : ''}`}>
             <div className="aspect-[9/16] bg-gray-200 animate-pulse rounded-xl relative">
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div className="w-10 sm:w-[64px] h-10 sm:h-[64px] bg-gray-300 animate-pulse rounded-full" />

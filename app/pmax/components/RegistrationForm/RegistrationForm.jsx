@@ -75,7 +75,7 @@ export default function RegistrationForm({
     if (formState.showOtpInput && inputRefs.current[0]) {
       inputRefs.current[0].focus();
     }
-  }, [formState.showOtpInput]);;
+  }, [formState.showOtpInput]);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -151,11 +151,6 @@ export default function RegistrationForm({
       return;
     }
 
-    if (formData.mobileNo.length < 10) {
-      setFormState(prev => ({ ...prev, error: 'Please enter a valid mobile number' }));
-      return;
-    }
-
     if (!formData.gender) {
       setFormState(prev => ({ ...prev, error: 'Please select gender' }));
       return;
@@ -163,6 +158,11 @@ export default function RegistrationForm({
 
     if (!formData.age) {
       setFormState(prev => ({ ...prev, error: 'Please select age' }));
+      return;
+    }
+
+    if (formData.mobileNo.length < 10) {
+      setFormState(prev => ({ ...prev, error: 'Please enter a valid mobile number' }));
       return;
     }
 
@@ -226,8 +226,6 @@ export default function RegistrationForm({
     }
   };
 
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -272,7 +270,7 @@ export default function RegistrationForm({
       await controller.submitLeadForm(submitData);
       await controller.submitForm(submitData);
 
-      ToastComponent.success('Thank you! Our team will contact you shortly.');
+      ToastComponent.success('Thank you for showing interest. Our executive will get back to you shortly.');
 
       setFormData({
         firstName: '',
@@ -313,12 +311,12 @@ export default function RegistrationForm({
   };
 
   return (
-    <div className="hidden md:block relative max-w-sm mx-auto rounded-[20px] bg-blue-100 z-10 mt-10">
+    <div className="relative w-full max-w-sm mx-auto rounded-[20px] bg-blue-100 z-[8] mb-10 md:mt-10">
       {/* Header */}
       <div className="flex justify-center -mt-6">
-        <div className="bg-[url('/images/lp/maxlp/orange-bg.png')] bg-cover bg-no-repeat bg-center h-[44px] w-full max-w-[240px] flex flex-col items-center justify-center">
+        <div className="bg-[url('/images/lp/maxlp/orange-bg.png')] bg-cover bg-no-repeat bg-center h-[44px] w-full max-w-[240px] flex flex-col items-center justify-center rounded-t-[20px]">
           <div className="text-center">
-            <h1 className="text-white text-[16px] font-bold leading-tight">
+            <h1 className="text-white text-[16px] font-semibold leading-tight">
               Free Consultation
             </h1>
             <p className="text-[10px] font-normal text-white">with senior {['ivf', 'iui', 'fertility'].includes(service?.toLowerCase()) ? service : 'IVF'} Specialist</p>
@@ -326,18 +324,25 @@ export default function RegistrationForm({
         </div>
       </div>
 
-      {/* Error Message */}
-      {formState.error && (
-        <div className="absolute top-[187px] left-12 z-20">
-          <p className="text-red-500 text-[14px] font-medium bg-white px-2 py-1 rounded shadow-lg">{formState.error}</p>
+      <div className="px-6 md:px-8">
+        {/* EMI Text */}
+        <div className="text-center text-[#5E2671] text-[13px] font-bold mt-2 mb-4">
+          Get 0% interest on EMI
+          <br />
+          <span className="">Starting ₹4,999* p/m</span>
         </div>
-      )}
 
-      <div className="px-6">
+        {/* Error Message */}
+        {formState.error && (
+          <div className="mt-2 flex justify-center">
+            <p className="text-red-500 text-[14px] text-center font-medium">{formState.error}</p>
+          </div>
+        )}
+
         {/* Form Fields */}
-        <div className="mt-4 space-y-2 px-1">
+        <div className="mt-4 space-y-4 px-2">
           {/* Full Name */}
-          <div className="flex items-center border-b border-[#5E2671] pb-1 mb-4">
+          <div className="flex items-center border-b border-[#5E2671] pb-1">
             <img
               src="/images/lp/maxlp/profile-orange.png"
               alt="Profile"
@@ -351,20 +356,20 @@ export default function RegistrationForm({
                 onChange={handleInputChange}
                 name="firstName"
                 disabled={formState.loading}
-                className="w-full bg-transparent text-[#5E2671] placeholder-primary placeholder:font-bold placeholder:text-[14px] outline-none py-1 disabled:opacity-50"
+                className="w-full bg-transparent text-[#333333] placeholder-[#333333] placeholder:text-[16px] outline-none mt-2 disabled:opacity-50"
               />
             </div>
           </div>
 
           {/* Gender & Age */}
-          <div className="flex gap-3 mb-4">
+          <div className="flex gap-3 pt-2">
             <div className="flex-1">
               <select
                 name="gender"
                 value={formData.gender}
                 onChange={handleInputChange}
                 disabled={formState.loading}
-                className="w-full bg-transparent text-[#5E2671] placeholder:text-primary placeholder:font-bold outline-none border-b border-[#5E2671] pb-1 text-[14px] disabled:opacity-50"
+                className="w-full bg-transparent text-[#5E2671] outline-none border-b border-[#5E2671] pb-1 text-[14px] disabled:opacity-50"
               >
                 <option value="">Gender</option>
                 <option value="Male">Male</option>
@@ -377,7 +382,7 @@ export default function RegistrationForm({
                 value={formData.age}
                 onChange={handleInputChange}
                 disabled={!formData.gender || formState.loading}
-                className="w-full bg-transparent text-[#5E2671] placeholder:text-primary placeholder:font-bold outline-none border-b border-[#5E2671] pb-1 text-[14px] disabled:opacity-50"
+                className="w-full bg-transparent text-[#5E2671] outline-none border-b border-[#5E2671] pb-1 text-[14px] disabled:opacity-50"
               >
                 <option value="">Age</option>
                 {ageOptions.map(age => (
@@ -388,14 +393,14 @@ export default function RegistrationForm({
           </div>
 
           {/* Mobile Number */}
-          <div className="flex items-center border-b border-[#5E2671] pb-1 relative mb-3">
+          <div className="flex items-center border-b border-[#5E2671] pb-1 relative pt-2">
             <img
               src="/images/lp/maxlp/flag.png"
               alt="India Flag"
               className="w-[20px] h-[20px] mr-2 object-contain"
             />
-            <span className="text-primary font-bold text-[14px] mr-2">+91</span>
-            <div className="w-[1px] mr-2 h-6 bg-primary"></div>
+            <span className="text-[#333333] font-bold text-[14px] md:text-[16px] mr-2">+91</span>
+            <div className="w-[1px] mr-2 h-6 bg-[#333333]"></div>
             <div className="flex-1">
               <input
                 type="tel"
@@ -405,7 +410,7 @@ export default function RegistrationForm({
                 name="mobileNo"
                 maxLength="10"
                 disabled={formState.loading}
-                className="w-full bg-transparent text-[#5E2671] placeholder-primary placeholder:font-bold placeholder:text-[14px] outline-none py-1 disabled:opacity-50"
+                className="w-full bg-transparent text-[#333333] placeholder-[#333333] placeholder:font-bold placeholder:text-[14px] md:placeholder:text-[16px] outline-none py-1 disabled:opacity-50"
               />
             </div>
             <button
@@ -424,7 +429,7 @@ export default function RegistrationForm({
 
           {/* OTP Input */}
           {formState.showOtpInput && (
-            <div className="flex gap-2 mb-3 items-center">
+            <div className="flex gap-2 pt-2 items-center">
               {Array(4).fill(0).map((_, index) => (
                 <input
                   key={index}
@@ -448,25 +453,8 @@ export default function RegistrationForm({
             </div>
           )}
 
-          {/* reCAPTCHA disabled for development */}
-
-          {/* Consent */}
-          <div className="flex items-center mb-3">
-            <input
-              type="checkbox"
-              name="consent"
-              id="consent"
-              checked={formData.consent}
-              onChange={handleInputChange}
-              className="mr-2"
-            />
-            <label htmlFor="consent" className="text-[12px] text-[#5E2671]">
-              I consent Oasis Fertility to contact me
-            </label>
-          </div>
-
           {/* Call Back Button */}
-          <div className="hidden md:flex w-full justify-center !mt-4 !mb-1">
+          <div className="w-full flex justify-center !mt-8 !mb-2">
             <button
               type="button"
               onClick={handleSubmit}
@@ -474,18 +462,21 @@ export default function RegistrationForm({
               className={`${formState.loading || !isFormValid
                 ? 'bg-secondary cursor-not-allowed opacity-70'
                 : 'bg-secondary hover:bg-[#d06a28]'
-                } text-white font-bold py-2 px-[10px] w-[280px] rounded-full flex items-center justify-between transition-colors duration-200`}
+                } text-white font-semibold py-2 w-full rounded-full flex flex-col items-center justify-center transition-colors duration-200`}
             >
               {formState.loading ? (
-                <p className="text-[18px] leading-tight w-full text-center">
+                <p className="text-[16px] sm:text-[23px] leading-tight">
                   Submitting...
                 </p>
               ) : (
                 <>
-                  <p className="text-[18px] ml-6 leading-tight">
+                  <p className="text-[16px] sm:text-[23px] leading-tight">
                     Get a Call Back
                   </p>
-                  <span className="bg-white text-[#E8772E] font-medium text-[12px] px-2 py-0.5 rounded-full">Within 1 min</span>
+                  <div className="flex items-center justify-center">
+                    <img src="/images/lp/maxlp/call icon.png" className="mr-2" width="14" height="14" />
+                    <span className="font-normal text-[14px]">Within 1 min</span>
+                  </div>
                 </>
               )}
             </button>
@@ -493,11 +484,11 @@ export default function RegistrationForm({
         </div>
 
         {/* Footer Note */}
-        <div className="py-2 text-gray-600 flex items-start gap-2 text-sm">
-          <img src="/images/lp/maxlp/shield.png" className="ml-[16px]" width={20} height={20} />
-          <span className="text-[11px] text-[#2B5F8A]">
+        <div className="py-4 text-[#2B5F8A] flex items-start gap-3 text-sm">
+          <img src="/images/lp/maxlp/shield.png" className="" width={29} height={31} />
+          <span className="text-[12px]">
             We keep your data <strong>100% safe</strong>. By submitting, you accept our{" "}
-            <span className="cursor-pointer font-semibold">Terms and Conditions</span>
+            <span className="font-semibold cursor-pointer">Terms and Conditions</span>
           </span>
         </div>
       </div>

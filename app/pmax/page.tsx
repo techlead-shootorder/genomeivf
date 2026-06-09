@@ -30,7 +30,7 @@ const DynamicComponents = {
 const Page = memo(() => {
     return (
         <main>
-            <MetaHeader isMeta={isMeta}/>
+            <MetaHeader isMeta={isMeta} googel1num={true}/>
             <HeroMetalp
                 isMeta={isMeta}
                 customForm={<RegistrationForm center={filteredCity} service="Fertility" />}
@@ -86,10 +86,6 @@ const Page = memo(() => {
 
             <Suspense fallback={<MinimalLoader />}>
                 <DynamicComponents.MaxFooter />
-            </Suspense>
-
-            <Suspense fallback={<MinimalLoader />}>
-                <DynamicComponents.VideoIndiaStickyButton isMeta={isMeta} />
             </Suspense>
         </main>
     );
