@@ -36,9 +36,9 @@ const DesktopDoctorCard = memo(({ doctor, service }) => {
                     <div className="flex justify-center mb-0">
                         <div className="relative">
                             <img
-                                src={`/images/doctor/newDoctors/${doctor.docterImage}`}
+                                src={doctor.docterImage?.startsWith('genome/') ? `/images/doctor/${doctor.docterImage}` : `/images/doctor/newDoctors/${doctor.docterImage}`}
                                 alt={doctor?.fullname || "Doctor Image"}
-                                className="w-48 h-48 object-cover"
+                                className="w-48 h-48 object-contain object-bottom"
                             />
                             {doctor.experience && <div className="absolute bottom-6 -left-8 bg-white text-gray-800 px-2 py-1 rounded-full text-xs font-medium flex items-center space-x-1">
                                 <img src='/images/lp/maxlp/green-badge.png' alt='badge' className='h-[20px] w-[18px]' />
@@ -97,9 +97,9 @@ const MobileDoctorCard = memo(({ doctor, service }) => {
                     <div className="flex justify-center mb-4">
                         <div className="relative">
                             <img
-                                src={`/images/doctor/newDoctors/${doctor.docterImage}`}
+                                src={doctor.docterImage?.startsWith('genome/') ? `/images/doctor/${doctor.docterImage}` : `/images/doctor/newDoctors/${doctor.docterImage}`}
                                 alt={doctor.fullname || "Doctor Image"}
-                                className="w-[290px] h-[290px] object-cover"
+                                className="w-[290px] h-[290px] object-contain object-bottom"
                             />
                             {doctor.experience && <div className="absolute bottom-4 -left-6 bg-white text-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center space-x-1">
                                 <img src='/images/lp/maxlp/green-badge.png' className='h-[28px] w-[24.33px]' />

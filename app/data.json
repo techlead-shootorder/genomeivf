@@ -18,7 +18,7 @@
       "designation": "Fertility Specialist",
       "experience": "17+ Yrs",
       "qualification": "MBBS, MS",
-      "docterImage": "sujoy-dasgupta.webp",
+      "docterImage": "genome/Dr.sujoy-dasgupta.png",
       "practoRating": "5.0"
     },
     {
@@ -27,7 +27,7 @@
       "designation": "Fertility Specialist",
       "experience": "14+ Yrs",
       "qualification": "MBBS, DNB, FNB",
-      "docterImage": "sabnam-parvin.jpg",
+      "docterImage": "genome/Dr.sabnam-parvin.png",
       "practoRating": "4.8"
     },
     {
@@ -36,7 +36,7 @@
       "designation": "Fertility Specialist",
       "experience": "14+ Yrs",
       "qualification": "MBBS, MS(Obs & Gyn), DNB, MRCOG",
-      "docterImage": "sohini-munshi.jpg",
+      "docterImage": "genome/Dr.sohini-munshi.png",
       "practoRating": "4.5"
     },
     {
@@ -45,7 +45,7 @@
       "designation": "Fertility Specialist",
       "experience": "14+ Yrs",
       "qualification": "MBBS, MS, DNB, MRCOG, FMAS, FRM",
-      "docterImage": "sudip-samanta.jpg",
+      "docterImage": "genome/Dr.sudip-samanta.png",
       "practoRating": "4.5"
     }
   ],
@@ -120,7 +120,7 @@
       "fullname": "Dr. Sujoy Dasgupta",
       "designation": "Fertility Specialist",
       "experience": "17+ Yrs",
-      "docterImage": "sujoy-dasgupta.webp",
+      "docterImage": "genome/Dr.sujoy-dasgupta.png",
       "master_id": "34",
       "qualification": "MBBS, MS",
       "practoRating": "5.0"
@@ -130,7 +130,7 @@
       "fullname": "Dr. Sabnam Parvin",
       "designation": "Fertility Specialist",
       "experience": "14+ Yrs",
-      "docterImage": "sabnam-parvin.jpg",
+      "docterImage": "genome/Dr.sabnam-parvin.png",
       "master_id": "34",
       "qualification": "MBBS, DNB, FNB",
       "practoRating": "4.8"
@@ -140,7 +140,7 @@
       "fullname": "Dr. Sohini Munshi",
       "designation": "Fertility Specialist",
       "experience": "14+ Yrs",
-      "docterImage": "sohini-munshi.jpg",
+      "docterImage": "genome/Dr.sohini-munshi.png",
       "master_id": "34",
       "qualification": "MBBS, MS(Obs & Gyn), DNB, MRCOG",
       "practoRating": "4.5"
@@ -150,7 +150,7 @@
       "fullname": "Dr. Sudip Samanta",
       "designation": "Fertility Specialist",
       "experience": "14+ Yrs",
-      "docterImage": "sudip-samanta.jpg",
+      "docterImage": "genome/Dr.sudip-samanta.png",
       "master_id": "34",
       "qualification": "MBBS, MS, DNB, MRCOG, FMAS, FRM",
       "practoRating": "4.5"
