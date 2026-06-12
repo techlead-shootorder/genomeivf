@@ -48,7 +48,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             id: 1,
             title: "IVF (In Vitro Fertilization)",
             description: "IVF combines eggs and sperm in a lab for precise fertilization and embryo transfer. Choose Oasis Fertility + Genome for advanced tech, expert care, and personalized solutions, ensuring your best chance at parenthood.",
-            image: "/images/lp/treatments/updated/Infertility_Treatments/IVF.webp",
+            image: "/images/doctor/genome/IVF (In Vitro Fertilization).webp",
             gradient: "from-blue-200 via-blue-400 to-blue-600",
             category: "IVF"
         },
@@ -56,7 +56,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             id: 2,
             title: "Drug Free IVF (IVM)",
             description: "IVM (In-Vitro Maturation) nurtures immature eggs in the lab, reducing hormonal impact. Oasis Fertility + Genome excels with precision technology, trusted specialists, and individualized care for a safer, more effective fertility journey.",
-            image: "/images/lp/treatments/updated/Infertility_Treatments/IVM.webp",
+            image: "/images/doctor/genome/Drug Free IVF (IVM).webp",
             gradient: "from-blue-400 via-blue-500 to-blue-600",
             category: "IVF"
         },
@@ -72,7 +72,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             id: 4,
             title: "OITI Treatment",
             description: "OITI (Ovulation Induction with Timed Intercourse) uses medications to stimulate the ovaries to produce eggs. This is followed by timed intercourse during ovulation. It's the first line of treatment for women with irregular ovulation.",
-            image: "/images/lp/treatments/updated/Infertility_Treatments/IVF.webp",
+            image: "/images/doctor/genome/OITI Treatment.webp",
             gradient: "from-blue-300 via-green-400 to-blue-500",
             category: "IUI"
         },
@@ -80,7 +80,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             id: 5,
             title: "IUI Treatment",
             description: "IUI (Intrauterine Insemination) places prepared sperm directly into the uterus during ovulation. A less invasive option with higher success rates when combined with expert timing and care.",
-            image: "/images/lp/treatments/updated/Infertility_Treatments/IVF.webp",
+            image: "/images/doctor/genome/IUI Treatment.webp",
             gradient: "from-green-300 via-blue-400 to-blue-500",
             category: "IUI"
         },
@@ -96,7 +96,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             id: 7,
             title: "Genetic Testing (PGT)",
             description: "Preimplantation Genetic Testing screens embryos for genetic abnormalities before transfer. This advanced technique increases success rates and reduces miscarriage risk.",
-            image: "/images/lp/treatments/updated/Infertility_Treatments/IVF.webp",
+            image: "/images/doctor/genome/Genetic Testing (PGT).webp",
             gradient: "from-orange-300 via-orange-400 to-blue-500",
             category: "Other"
         },
@@ -104,7 +104,7 @@ const MaxTreatment = ({ service, isMeta, center }) => {
             id: 8,
             title: "Egg Freezing",
             description: "Egg freezing preserves your fertility for the future. Advanced vitrification techniques ensure high survival rates when you're ready to conceive.",
-            image: "/images/lp/treatments/updated/Infertility_Treatments/IVF.webp",
+            image: "/images/doctor/genome/Egg Freezing.webp",
             gradient: "from-cyan-300 via-blue-400 to-blue-500",
             category: "Other"
         },

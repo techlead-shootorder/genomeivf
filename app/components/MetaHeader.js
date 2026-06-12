@@ -33,12 +33,12 @@ const DesktopHeader = memo(({ center, metanum, googel1num }) => (
         <div className="px-2 lg:px-4 xl:px-4 2xl:px-8 flex justify-between items-center py-3">
             <div className="flex items-center">
                 <img
-                    src='https://genomeivf.com/images/logo.png'
+                    src='/images/doctor/genome/logo.webp'
                     alt='Genome IVF logo'
-                    width={150}
-                    height={50}
+                    width={220}
+                    height={60}
                     className='object-contain'
-                    style={{ height: 'auto' }}
+                    style={{ height: '60px', width: 'auto', marginTop: '-10px', marginBottom: '-10px' }}
                 />
             </div>
             {!googel1num && <PhoneSection center={center} metanum={metanum} />}
@@ -53,12 +53,12 @@ const MobileHeader = memo(({isMeta, googel1num}) => (
     <nav className="flex md:hidden fixed w-full top-[0px] z-[50] items-center justify-between bg-gray-100 px-4 py-2">
         <div className="flex items-center text-white">
             <img
-                src='https://genomeivf.com/images/logo.png'
+                src='/images/doctor/genome/logo.webp'
                 alt='Genome IVF logo'
-                width={120}
-                height={40}
+                width={160}
+                height={44}
                 className='object-contain'
-                style={{ height: 'auto' }}
+                style={{ height: '44px', width: 'auto', marginTop: '-6px', marginBottom: '-6px' }}
             />
         </div>
         <div className="flex items-center">
