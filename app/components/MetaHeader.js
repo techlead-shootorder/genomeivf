@@ -5,7 +5,7 @@ import Link from "next/link";
 import { MdCall } from "react-icons/md";
 
 const PhoneSection = memo(() => {
-    const PhoneNum = "9513736476";
+    const PhoneNum = "9513736432";
     return (
         <div className="number flex items-center gap-2 md:mr-[40px] lg:mr-[60px] xl:mr-[100px]">
 
