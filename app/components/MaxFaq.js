@@ -64,7 +64,7 @@ const MaxFaq = ({center}) => {
                 <div className="text-left mb-8 md:flex md:justify-center md:gap-8 ">
                     <div className="text-[55px] md:text-5xl font-bold text-secondary">FAQs</div>
                     <h2 className="text-[29px] md:text-3xl font-bold text-[#2B5F8A] mb-4 md:mt-3">
-                       about Oasis Fertility + Genome
+                       about Oasis Fertility Genome
                     </h2>
                 </div>
 

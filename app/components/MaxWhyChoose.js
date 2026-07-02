@@ -110,7 +110,7 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="block md:hidden text-left mb-8 ml-4">
                         <h1 className='text-[40px] md:text-[55px] font-bold text-primary text-opacity-50'>Why</h1>
-                        <h2 className='text-[22px] md:text-3xl font-bold text-[#2B5F8A]'>Oasis Fertility + Genome</h2>
+                        <h2 className='text-[22px] md:text-3xl font-bold text-[#2B5F8A]'>Oasis Fertility Genome</h2>
 
                         <div className='mt-4'>
                             <p>For over two decades, Genome IVF has been one of Kolkata’s trusted names in fertility care. Now, as part of Oasis Fertility, patients can access enhanced fertility expertise, advanced reproductive technology, and comprehensive fertility solutions — while continuing to receive the compassionate care they trust.</p>
@@ -124,7 +124,7 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
                                 {/* Header, Description and CTA */}
                                 <div className='hidden md:flex  flex-col gap-8 w-[600px]'>
                                     <div>
-                                        <h1 className='text-4xl md:text-4xl font-bold text-secondary mb-2 whitespace-nowrap'>Why Oasis Fertility + Genome</h1>
+                                        <h1 className='text-4xl md:text-4xl font-bold text-secondary mb-2 whitespace-nowrap'>Why Oasis Fertility Genome</h1>
                                         <h2 className='text-2xl md:text-3xl font-bold text-primary'>Trusted Fertility Care, Now Stronger Together</h2>
                                     </div>
 
@@ -167,7 +167,7 @@ const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
                                         <div className='flex'>
                                             <div className='h-[100px] w-[55px] text-white bg-[#163D5C] flex justify-center items-center p-4'></div>
                                             <div className='h-[100px] text-white bg-[#1E4A6E] w-full flex items-center px-2'>
-                                                <img src="https://genomeivf.com/images/logo.png" alt='Genome IVF logo' height={54} width={125} className='object-contain brightness-0 invert' />
+                                                <img src="/images/doctor/genome/logo.png" alt='Genome IVF logo' height={70} width={180} className='object-contain brightness-0 invert' style={{ height: '70px', width: 'auto' }} />
                                             </div>
                                         </div>
                                         {oasisData.map((item, index) => (
