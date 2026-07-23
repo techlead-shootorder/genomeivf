@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import AnalyticsProvider, { PageViewTracker } from "@/app/components/Analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,9 +38,23 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-        {children}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NGWS74H"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
+        <AnalyticsProvider gtmId="GTM-NGWS74H">
+          <PageViewTracker />
+          {children}
+        </AnalyticsProvider>
+
         <Script
           src="https://truepulsetracking.com/js/script.js?id=49"
           strategy="afterInteractive"
