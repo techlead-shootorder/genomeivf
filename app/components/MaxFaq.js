@@ -2,6 +2,10 @@
 import { useState } from 'react';
 import { FaAngleRight, FaAngleDown } from "react-icons/fa6";
 
+/**
+ * @param {object} props
+ * @param {any} [props.center]
+ */
 const MaxFaq = ({center}) => {
      const [openDropdown, setOpenDropdown] = useState(null);
     

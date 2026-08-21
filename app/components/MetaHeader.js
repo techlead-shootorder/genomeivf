@@ -70,6 +70,13 @@ const MobileHeader = memo(({isMeta, googel1num}) => (
 MobileHeader.displayName = 'MobileHeader';
 
 // Main Header Component
+/**
+ * @param {object} props
+ * @param {any} [props.center]
+ * @param {any} [props.metanum]
+ * @param {any} [props.googel1num]
+ * @param {any} [props.isMeta]
+ */
 const HeaderTesting = ({ center, metanum, googel1num, isMeta }) => {
 
 

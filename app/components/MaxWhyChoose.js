@@ -7,6 +7,12 @@ import MaxGooglePeekBoo from './MaxGooglePeekBoo'
 // Phone number hardcoded for India LP
 const PHONE_NUMBER = '9513736432';
 
+/**
+ * @param {object} props
+ * @param {any} [props.center]
+ * @param {any} [props.isMeta]
+ * @param {boolean} [props.hideEbook]
+ */
 const MaxWhyChoose = ({ center, isMeta, hideEbook = false }) => {
 
     const [showPopup, setShowPopup] = useState(false);

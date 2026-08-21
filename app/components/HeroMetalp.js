@@ -34,7 +34,7 @@ const LOCATION_BANNERS = {
   // Default banner
   default: {
     desktop: {
-      src: "/images/lp/lp2/desk-banner/Landing-Page-Banners.webp",
+      src: "/images/lp/lp2/desk-banner/Landing-Page-Banners1.png",
       width: 1728,
       height: 787,
       className: "w-full object-cover absolute left-0 top-0 hidden md:block h-full",
@@ -42,7 +42,7 @@ const LOCATION_BANNERS = {
       sizes: "(min-width: 768px) 100vw, 0vw"
     },
     mobile: {
-      src: "/images/lp/lp2/mobile-banner/Landing-Page-Banners_Mobile.webp",
+      src: "/images/lp/lp2/mobile-banner/Landing-Page-Banners_Mobile1.png",
       width: 428,
       height: 452,
       className: "w-full object-cover absolute left-0 -top-[0px] md:hidden h-full",
@@ -108,14 +108,14 @@ const HeroHeading = memo(({ formatService }) => (
     <p className="text-[16px] md:text-[24px] font-semibold md:font-bold text-[#452A45] mb-3  text-center md:text-left">You&apos;re in the Right Hands.</p> */}
 
     <div className="bg-[#FFC5DF78] px-2 py-2 sm:px-6 sm:py-2 rounded-full flex items-center justify-center space-x-4">
-     
+
       <div className="flex items-center space-x-2">
         <span className="text-[14px] sm:text-2xl font-bold text-secondary">50+</span>
         <span className="text-[10px] sm:text-[12px] text-gray-800 font-bold mt-1">Expert <br /> Doctors</span>
       </div>
-      
+
       <div className="w-px h-8 bg-gray-800"></div>
-      
+
       <div className="flex items-center space-x-2">
         <span className="text-[14px] sm:text-2xl font-bold text-secondary">1 Lac+</span>
         <div className="text-sm text-gray-800">
@@ -193,6 +193,13 @@ MobileLeadForm.displayName = "MobileLeadForm";
 
 
 // Main Component
+/**
+ * @param {object} props
+ * @param {any} [props.service]
+ * @param {any} [props.isMeta]
+ * @param {any} [props.isfemaleAssessment]
+ * @param {React.ReactNode} [props.customForm]
+ */
 const HeroV2 = ({ service, isMeta, isfemaleAssessment, customForm = null }) => {
   // const centerName = React.useMemo(() => formatCenterName(center?.center_name_heading), [center?.center_name_heading]);
   const formatService = service ? service == 'fertility' ? 'Fertility' : service?.toUpperCase() : 'IVF';
@@ -206,7 +213,7 @@ const HeroV2 = ({ service, isMeta, isfemaleAssessment, customForm = null }) => {
     }
   }, [isfemaleAssessment, service, formatService]);
 
-//   added comment to push
+  //   added comment to push
 
   return (
     <Suspense fallback={

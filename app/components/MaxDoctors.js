@@ -133,6 +133,13 @@ const MobileDoctorCard = memo(({ doctor, service }) => {
 
 MobileDoctorCard.displayName = "MobileDoctorCard";
 
+/**
+ * @param {object} props
+ * @param {any} [props.center]
+ * @param {any} [props.filteredDoctors]
+ * @param {any} [props.service]
+ * @param {any} [props.isMeta]
+ */
 const MaxDoctors = ({center, filteredDoctors, service, isMeta }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showPopup, setShowPopup] = useState(false);

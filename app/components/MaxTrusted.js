@@ -60,7 +60,13 @@ const responsive = {
 };
 // Testing
 
-function IVFClinicSliderV2({userAgentString, cityVideos }) {
+/**
+ * @param {object} props
+ * @param {any} [props.userAgentString]
+ * @param {any} [props.cityVideos]
+ * @param {any} [props.center]
+ */
+function IVFClinicSliderV2({userAgentString, cityVideos, center }) {
     //  const cityVideos = [
     //    {
     //     "id": "1",
