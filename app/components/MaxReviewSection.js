@@ -13,24 +13,6 @@ const ReviewsSection = ({ hideEbook = false }) => {
     const reviewsData = {
         IVF: [
             {
-                id: 1,
-                rating: 5,
-                date: "a year ago",
-                title: "Immense care and wonderful treatment",
-                content: "Since 2020 I along with my wife Mousumi Ray got attached with Genome Fertility Centre. My wife was under the treatment of Dr Sujoy Dasgupta sir, and with his immense care and wonderful treatment, we had a great experience.",
-                author: "Satyajit Ray",
-                clientId: "GEN0072311"
-            },
-            {
-                id: 2,
-                rating: 5,
-                date: "a year ago",
-                title: "Exceptional care and expertise",
-                content: "We had an incredible experience at Genome Kolkata, thanks to Dr. Sohini Munshi's exceptional care and expertise. Despite the initial complications, she handled our situation with utmost efficiency and compassion.",
-                author: "J.Ghosh",
-                clientId: "GEN0072312"
-            },
-            {
                 id: 3,
                 rating: 5,
                 date: "a year ago",
@@ -38,42 +20,6 @@ const ReviewsSection = ({ hideEbook = false }) => {
                 content: "Had such a great experience here! Everyone was super friendly and made me feel really welcome from the start. The staffs and the doctor are really awesome — they were always helpful and made sure I was comfortable.",
                 author: "Dhana chandra",
                 clientId: "GEN0072313"
-            },
-            {
-                id: 4,
-                rating: 5,
-                date: "11 months ago",
-                title: "Best Infertility centre in Kolkata",
-                content: "Genome is best Infertility centre among Kolkata. Dr Sohini Munsi is a good doctor. All staff of Genome is very Helpfull. We are thankful to Genome for Our Success.",
-                author: "Rachana Bera",
-                clientId: "GEN0072314"
-            },
-            {
-                id: 5,
-                rating: 5,
-                date: "a year ago",
-                title: "Exclusive service and affordable",
-                content: "We are grateful for Genome the fertility (Kolkata) to provide exclusive service in our pregnancy journey. Dr. Sujay Dasgupta Sir is like God to us and other supportive staffs are very nice. Genome provided affordable price to help us.",
-                author: "Biplab Paul",
-                clientId: "GEN0072315"
-            },
-            {
-                id: 6,
-                rating: 5,
-                date: "2 years ago",
-                title: "Blessed with a baby girl",
-                content: "Thanks to Genome and Dr. Sujoy Dasgupta as we have been blessed with a baby girl. The staff at Genome were very professional and helped us to a great extent. Extremely grateful for the service.",
-                author: "Shatarupa Bhattacharya",
-                clientId: "GEN0072316"
-            },
-            {
-                id: 7,
-                rating: 5,
-                date: "3 years ago",
-                title: "Amazing and compassionate process",
-                content: "My sister was treated by Dr. Sujoy Dasgupta at Genome and he was really amazing. He helped her get pregnant after years of trying, and he was really kind and compassionate throughout the process. Highly recommend him.",
-                author: "Sreya Das",
-                clientId: "GEN0072317"
             },
             {
                 id: 8,
@@ -124,15 +70,6 @@ const ReviewsSection = ({ hideEbook = false }) => {
                 clientId: "GEN0015293"
             },
             {
-                id: 3,
-                rating: 5,
-                date: "3 years ago",
-                title: "Approachable and informed",
-                content: "The assistance that I received from Genome The Fertility Centre is incredible. Dr. Sujoy Dasgupta and the staff were approachable and ensured that I am properly informed about my problem and treatment.",
-                author: "Shreya Damani",
-                clientId: "GEN0019814"
-            },
-            {
                 id: 4,
                 rating: 5,
                 date: "3 years ago",
@@ -160,15 +97,6 @@ const ReviewsSection = ({ hideEbook = false }) => {
                 clientId: "GEN0010945"
             },
             {
-                id: 7,
-                rating: 5,
-                date: "4 years ago",
-                title: "Talented and patient-friendly doctor",
-                content: "Thanks to Genome for their best services. I was Dr Sujoy Dasgupta's patient, he is a very talented, patient friendly doctor. He is the best in his field.",
-                author: "Avijit Debnath",
-                clientId: "GEN0014277"
-            },
-            {
                 id: 8,
                 rating: 5,
                 date: "3 years ago",
@@ -186,15 +114,6 @@ const ReviewsSection = ({ hideEbook = false }) => {
                 author: "Ashmit Boral",
                 clientId: "GEN0016152"
             },
-            {
-                id: 10,
-                rating: 5,
-                date: "a year ago",
-                title: "Grateful for second motherhood",
-                content: "I am very grateful to Genome, Dr. Sujoy Dasgupta sir and the entire team of Genome for giving me the taste of motherhood for the second time. 🙏🙏🙏",
-                author: "Tithi S",
-                clientId: "GEN0012039"
-            }
         ]
 
     };
@@ -213,7 +132,7 @@ const ReviewsSection = ({ hideEbook = false }) => {
         return Array.from({ length: 5 }, (_, index) => {
             const fullStars = Math.floor(rating);
             const hasHalfStar = rating % 1 !== 0;
-            
+
             if (index < fullStars) {
                 // Full star
                 return (

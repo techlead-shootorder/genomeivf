@@ -13,15 +13,6 @@
   },
   "testimonials": [
     {
-      "id": "1",
-      "fullname": "Dr. Sujoy Dasgupta",
-      "designation": "Fertility Specialist",
-      "experience": "17+ Yrs",
-      "qualification": "MBBS, MS",
-      "docterImage": "genome/Dr.sujoy-dasgupta.png",
-      "practoRating": "5.0"
-    },
-    {
       "id": "2",
       "fullname": "Dr. Sabnam Parvin",
       "designation": "Fertility Specialist",
@@ -29,15 +20,6 @@
       "qualification": "MBBS, DNB, FNB",
       "docterImage": "genome/Dr.sabnam-parvin.png",
       "practoRating": "4.8"
-    },
-    {
-      "id": "3",
-      "fullname": "Dr. Sohini Munshi",
-      "designation": "Fertility Specialist",
-      "experience": "14+ Yrs",
-      "qualification": "MBBS, MS(Obs & Gyn), DNB, MRCOG",
-      "docterImage": "genome/Dr.sohini-munshi.png",
-      "practoRating": "4.5"
     },
     {
       "id": "4",
@@ -116,16 +98,6 @@
   ],
   "doctors": [
     {
-      "id": 1,
-      "fullname": "Dr. Sujoy Dasgupta",
-      "designation": "Fertility Specialist",
-      "experience": "17+ Yrs",
-      "docterImage": "genome/Dr.sujoy-dasgupta.png",
-      "master_id": "34",
-      "qualification": "MBBS, MS",
-      "practoRating": "5.0"
-    },
-    {
       "id": 2,
       "fullname": "Dr. Sabnam Parvin",
       "designation": "Fertility Specialist",
@@ -134,16 +106,6 @@
       "master_id": "34",
       "qualification": "MBBS, DNB, FNB",
       "practoRating": "4.8"
-    },
-    {
-      "id": 3,
-      "fullname": "Dr. Sohini Munshi",
-      "designation": "Fertility Specialist",
-      "experience": "14+ Yrs",
-      "docterImage": "genome/Dr.sohini-munshi.png",
-      "master_id": "34",
-      "qualification": "MBBS, MS(Obs & Gyn), DNB, MRCOG",
-      "practoRating": "4.5"
     },
     {
       "id": 4,
