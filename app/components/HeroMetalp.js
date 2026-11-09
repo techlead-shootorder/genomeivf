@@ -24,7 +24,7 @@ FormSkeleton.displayName = "FormSkeleton";
 const BannerSkeleton = memo(() => (
   <div className="animate-pulse">
     <div className="hidden md:block h-[787px] w-full bg-gray-200" />
-    <div className="md:hidden h-[452px] w-full bg-gray-200" />
+    <div className="md:hidden aspect-square w-full bg-gray-200" />
   </div>
 ));
 BannerSkeleton.displayName = "BannerSkeleton";
@@ -34,7 +34,7 @@ const LOCATION_BANNERS = {
   // Default banner
   default: {
     desktop: {
-      src: "/images/lp/lp2/desk-banner/Landing-Page-Banners1.png",
+      src: "/images/lp/lp2/desk-banner/Landing-Page-Banners.jpg",
       width: 1728,
       height: 787,
       className: "w-full object-cover absolute left-0 top-0 hidden md:block h-full",
@@ -42,10 +42,10 @@ const LOCATION_BANNERS = {
       sizes: "(min-width: 768px) 100vw, 0vw"
     },
     mobile: {
-      src: "/images/lp/lp2/mobile-banner/Landing-Page-Banners_Mobile1.png",
-      width: 428,
-      height: 452,
-      className: "w-full object-cover absolute left-0 -top-[0px] md:hidden h-full",
+      src: "/images/lp/lp2/mobile-banner/Landing-Page-Banners.jpg",
+      width: 800,
+      height: 800,
+      className: "w-full h-auto block md:hidden",
       sizes: "(max-width: 767px) 100vw, 0vw"
     }
   },
@@ -174,7 +174,7 @@ LeadFormWrapper.displayName = "LeadFormWrapper";
 // added comment to push code
 
 const MobileLeadForm = memo(({ formatService, isMeta }) => (
-  <div id="leadformlp3" className="md:hidden flex items-center -mt-[60px] w-full">
+  <div id="leadformlp3" className="md:hidden flex items-center mt-6 w-full">
     <div className="flex flex-col items-center w-full">
       <div className="flex justify-center w-full">
         {/* <div className="bg-[#2B5F8A] text-white w-[80%] text-center py-0.5 rounded-t-2xl font-semibold z-50">
@@ -221,7 +221,7 @@ const HeroV2 = ({ service, isMeta, isfemaleAssessment, customForm = null }) => {
         <BannerSkeleton />
       </div>
     }>
-      <section id="herolp3" className={`bg-[#fde9f2] ${isMeta ? 'md:h-[366px]' : 'md:h-[366px]'} relative max-w-screen-4xl mx-auto px-4 lg:px-10 xl:px-14 2xl:px-20`}>
+      <section id="herolp3" className={`bg-[#fde9f2] ${isMeta ? 'md:h-[366px]' : 'md:h-[366px]'} relative max-w-screen-4xl mx-auto px-0 md:px-4 lg:px-10 xl:px-14 2xl:px-20`}>
         <div>
           {/* <HeroHeading formatService={formatService} /> */}
           <div>
@@ -230,11 +230,8 @@ const HeroV2 = ({ service, isMeta, isfemaleAssessment, customForm = null }) => {
           </div>
         </div>
 
-        <div className={`relative pt-24 pb-14 flex h-full ${customForm ? 'md:pt-0 md:pb-0 items-end md:items-center justify-between md:justify-end lg:flex' : 'md:pt-14 md:pb-0 items-end justify-between lg:flex'}`}>
+        <div className={`relative hidden md:flex h-full ${customForm ? 'md:pt-0 md:pb-0 items-end md:items-center justify-between md:justify-end' : 'md:pt-14 md:pb-0 items-end justify-between'}`}>
           {!customForm && <InvisibleArticle />}
-          {customForm && (
-            <div className="md:hidden w-full" style={{ height: '320px' }}></div>
-          )}
           {!customForm && (
             <div className="hidden md:block md:mr-[0px] lg:mr-[50px] xl:mr-[100px] relative z-50">
               <LeadFormWrapper isMeta={isMeta} formatService={formatService} />
@@ -250,7 +247,7 @@ const HeroV2 = ({ service, isMeta, isfemaleAssessment, customForm = null }) => {
 
       {!customForm && <MobileLeadForm isMeta={isMeta} formatService={formatService} />}
       {customForm && (
-        <div id="leadformlp3" className="md:hidden flex items-center -mt-[60px] w-full relative z-[10]">
+        <div id="leadformlp3" className="md:hidden flex items-center mt-6 w-full relative z-[10]">
           <div className="flex flex-col items-center w-full">
             <div className="w-[90%]">
               {customForm}
